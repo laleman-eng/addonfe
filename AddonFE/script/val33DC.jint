@@ -1,0 +1,11 @@
+function execute()
+{
+	if (jsonString === "")
+	{
+		jsonString = "{}";
+	}
+
+	var url = 'http://asp2.maximise.cl/webinfo.ashx/addon1';
+	var result = sbo.GetResponse(url,jsonString);
+	return result;
+}

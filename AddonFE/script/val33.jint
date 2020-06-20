@@ -1,0 +1,16 @@
+var items1 = JSON.parse(items);
+var i = 1; 
+var result = "";
+
+function execute()
+{
+	if (i==1)
+	{
+		result = "error: cambio mensaje";
+	}
+	else
+	{
+		result = "ok";
+	}
+	return result;
+}
