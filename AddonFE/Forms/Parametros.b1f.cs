@@ -12,6 +12,7 @@ namespace AddonFE
         public SAPbouiCOM.Form oForm;
         public SAPbouiCOM.EditText oEditText;
         public SAPbouiCOM.LinkedButton oLinkedButton;
+        private string classid = "Parametros";
 
         public Parametros()
         {
@@ -69,7 +70,7 @@ namespace AddonFE
 
             oLinkItem.LinkTo = "oET01";
             oLinkedButton = oLinkItem.Specific as SAPbouiCOM.LinkedButton;    
-            oLinkedButton.LinkedObject = SAPbouiCOM.BoLinkedObject.lf_BusinessPartner;
+            oLinkedButton.LinkedObject = SAPbouiCOM.BoLinkedObject.lf_Invoice;
 
 
             }
@@ -93,9 +94,22 @@ namespace AddonFE
 
         private void Button2_ClickAfter(object sboObject, SAPbouiCOM.SBOItemEventArg pVal)
         {
-            SAPbouiCOM.Item oItem = oForm.Items.Item("oLB01");
-            oItem.Click();
+            try
+            {
+                SAPbouiCOM.Item oItemLinkedButtton = oForm.Items.Item("oLB01");
+                SAPbouiCOM.Item oItemEditText = oForm.Items.Item("oET01");
+                oEditText = (SAPbouiCOM.EditText)oItemEditText.Specific;
+                oEditText.Value = "P995695103";
+                oEditText.Active = false;
 
+                //P995695103
+                oItemLinkedButtton.Click();
+            }
+            catch (Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(classid +": " + ex.Message);
+            }
+            
         }
     }
 }

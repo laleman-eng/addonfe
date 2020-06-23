@@ -103,10 +103,12 @@ namespace AddonFE
         public void levantarVentanaSAP(string form, int DocEntry)
         {
 
-
             FormInit formInit = new FormInit();
             formInit.Show();
-            Application.SBO_Application.MessageBox(string.Format("Formlario: {0}, Numero Documento: {1}",form, DocEntry.ToString()));
+            formInit.LevantarVentaSAP("1", "Invoice");
+            
+
+           // Application.SBO_Application.MessageBox(string.Format("Formlario: {0}, Numero Documento: {1}", form, DocEntry.ToString()));
 
 
         }

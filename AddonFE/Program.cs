@@ -44,6 +44,9 @@ namespace AddonFE
   {
         static Webserver ws;
         static int contador = 0;
+        private static string classid = "Program";
+
+
         public static string SendResponse(HttpListenerRequest request)
         {
             string responseString = "<HTML><BODY> Estoy activo!</BODY></HTML>";
@@ -61,13 +64,8 @@ namespace AddonFE
             }
             if (script == "")
             {
-                script = @"
-                    var file = new System.IO.StreamWriter('log.txt');
-                    file.WriteLine('Hello World !');
-                    file.Dispose();
-                    (x * x).toString();
+                script = @"sbo.levantarVentanaSAP('Factura',33)                  
                 ";
-                engine.SetValue("x", 3);
             }
             var p = new SboJint();
             engine.SetValue("sbo", p);
@@ -129,7 +127,7 @@ namespace AddonFE
                 Application.SBO_Application.ItemEvent += new SAPbouiCOM._IApplicationEvents_ItemEventEventHandler(SBO_Application_ItemEvent);
 
                 //habilitacion del Webserver
-                string prefix = "http://+:50200/";
+                string prefix = "http://+:50201/";
                 var ws = new Webserver(SendResponse, prefix);
                 ws.Run();
 
@@ -140,17 +138,17 @@ namespace AddonFE
                     (3 * 3).toString();
                 ";
 
-                var url = "http://localhost:50200";
+                var url = "http://localhost:50201";
                 var test2 = p.GetResponse(url, script);
 
                 //validarJson();
 
                 oApp.Run();
-                System.Windows.Forms.MessageBox.Show("test");
+
             }
             catch (Exception ex)
             {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
+                System.Windows.Forms.MessageBox.Show(classid +": " + ex.Message);
             }
         }
 
@@ -191,11 +189,11 @@ namespace AddonFE
             try
             {
                 contador++;
-                if (contador ==1)
-                {
-                    var sboJint = new SboJint();
-                    sboJint.levantarVentanaSAP("form1", 2);
-                }
+                //if (contador ==1)
+                //{
+                //    var sboJint = new SboJint();
+                //    sboJint.levantarVentanaSAP("form1", 2);
+                //}
 
             }
 
