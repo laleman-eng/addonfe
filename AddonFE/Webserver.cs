@@ -64,6 +64,12 @@ namespace AddonFE
 
                                 var rstr = oResponderMethod(ctx.Request);
                                 var buf = Encoding.UTF8.GetBytes(rstr);
+
+                                ctx.Response.AddHeader("Access-Control-Allow-Headers", "Content-Type, Accept, X-Requested-With");
+                                ctx.Response.AddHeader("Access-Control-Allow-Methods", "GET, POST");
+                                ctx.Response.AddHeader("Access-Control-Max-Age", "1728000");
+
+                                ctx.Response.AppendHeader("Access-Control-Allow-Origin", "*");
                                 ctx.Response.ContentLength64 = buf.Length;
                                 ctx.Response.OutputStream.Write(buf, 0, buf.Length);
                             }

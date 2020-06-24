@@ -100,13 +100,14 @@ namespace AddonFE
             return result;
         }
 
-        public void levantarVentanaSAP(string form, int DocEntry)
+        public void levantarVentanaSAP(string docEntry, string objectSAP)
         {
 
             FormInit formInit = new FormInit();
             formInit.Show();
-            formInit.LevantarVentaSAP("1", "Invoice");
-            
+           // formInit.LevantarVentaSAP("1", "Invoice");
+
+            formInit.LevantarVentaSAP(docEntry, objectSAP);
 
            // Application.SBO_Application.MessageBox(string.Format("Formlario: {0}, Numero Documento: {1}", form, DocEntry.ToString()));
 

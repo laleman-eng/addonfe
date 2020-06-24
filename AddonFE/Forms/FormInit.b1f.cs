@@ -101,7 +101,7 @@ namespace AddonFE
             {
                 case "BusinessPartner":
                     {
-                        obolinkedObject = SAPbouiCOM.BoLinkedObject.lf_BusinessPartner;
+                        obolinkedObject =  SAPbouiCOM.BoLinkedObject.lf_BusinessPartner;
                         break;
                     }
                 case "Invoice":
@@ -114,8 +114,6 @@ namespace AddonFE
                         obolinkedObject = SAPbouiCOM.BoLinkedObject.lf_InvoiceCreditMemo;
                         break;
                     }
-
-
             }
             
             return obolinkedObject;

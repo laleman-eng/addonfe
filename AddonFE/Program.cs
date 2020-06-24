@@ -64,13 +64,25 @@ namespace AddonFE
             }
             if (script == "")
             {
-                script = @"sbo.levantarVentanaSAP('Factura',33)                  
-                ";
+                //                script = @"sbo.levantarVentanaSAP('1','Invoice')                  
+                //                ";
             }
-            var p = new SboJint();
-            engine.SetValue("sbo", p);
-            engine.Execute(script);
-            responseString = engine.GetCompletionValue().AsString();
+            else
+            {
+                try
+                {
+                    var p = new SboJint();
+                    engine.SetValue("sbo", p);
+                    engine.Execute(script);
+                    responseString = engine.GetCompletionValue().AsString();
+                }
+                catch (Exception ex)
+                {
+                    responseString = "error: " + ex.Message;
+                }
+                
+            }
+
             return responseString;
         }
 
@@ -122,9 +134,7 @@ namespace AddonFE
 
                 // Console.WriteLine(engine.Execute("2+2").GetCompletionValue());
 
-                Application.SBO_Application.AppEvent += new SAPbouiCOM._IApplicationEvents_AppEventEventHandler(SBO_Application_AppEvent);
 
-                Application.SBO_Application.ItemEvent += new SAPbouiCOM._IApplicationEvents_ItemEventEventHandler(SBO_Application_ItemEvent);
 
                 //habilitacion del Webserver
                 string prefix = "http://+:50201/";
@@ -142,6 +152,9 @@ namespace AddonFE
                 var test2 = p.GetResponse(url, script);
 
                 //validarJson();
+
+                Application.SBO_Application.AppEvent += new SAPbouiCOM._IApplicationEvents_AppEventEventHandler(SBO_Application_AppEvent);
+                Application.SBO_Application.ItemEvent += new SAPbouiCOM._IApplicationEvents_ItemEventEventHandler(SBO_Application_ItemEvent);
 
                 oApp.Run();
 
@@ -189,11 +202,11 @@ namespace AddonFE
             try
             {
                 contador++;
-                //if (contador ==1)
-                //{
-                //    var sboJint = new SboJint();
-                //    sboJint.levantarVentanaSAP("form1", 2);
-                //}
+                if (contador == 1)
+                {
+                    //var sboJint = new SboJint();
+                    //sboJint.levantarVentanaSAP("1", "Invoice");
+                }
 
             }
 
