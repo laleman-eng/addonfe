@@ -1,0 +1,25 @@
+var json  = JSON.parse(jsonString);
+var url = "http://localhost:2396";
+var script = "/api/Factura/validar"; // "(4*4).toString();";  
+var result= "";
+
+fuction execute ()
+{	
+	jQuery.ajax({
+	type: 'post',
+	dataType: "text",
+	crossDomain: true,//recibo
+	contentType: 'application/text',  //envio
+	url: miurl,
+	async: true,
+	timeout: 15000,
+	data: script    //body
+	}).done(function (result) {
+		if (result.startsWith("error:")) {
+			result = "Error";
+			//alert(result.replace("error:", ""));
+		 } else {
+			 result = "ok";
+		   }
+		});
+}

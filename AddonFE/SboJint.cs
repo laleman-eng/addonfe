@@ -54,13 +54,6 @@ namespace AddonFE
             int a = oRecordSet.RecordCount;
         }
 
-        private HttpWebRequest GetWebRequest(string url)
-        {
-            var request = (HttpWebRequest)WebRequest.Create(url);
-            request.Method = "POST";
-            request.ContentType = "application/text";
-            return request;
-        }
 
         private Stream GetResponseStream(HttpWebRequest request, string body = "")
         {
@@ -81,12 +74,15 @@ namespace AddonFE
                 throw e;
             }
         }
-        public string GetResponse(string url, string body = "")
+       
+        public string SendText(string url, string body = "")
         {
             var result = "";
             try
             {
-                var request = GetWebRequest(url);
+                var request = (HttpWebRequest)WebRequest.Create(url);
+                request.Method = "POST";
+                request.ContentType = "application/text";
                 Stream webStream = GetResponseStream(request, body);
                 StreamReader responseReader = new StreamReader(webStream);
                 result = responseReader.ReadToEnd();
@@ -99,6 +95,29 @@ namespace AddonFE
             }
             return result;
         }
+
+        public string SendJson(string url, string body = "")
+        {
+            var result = "";
+            try
+            {
+                var request = (HttpWebRequest)WebRequest.Create(url);
+                request.Method = "POST";
+                request.ContentType = "application/json";
+                
+                Stream webStream = GetResponseStream(request, body);
+                StreamReader responseReader = new StreamReader(webStream);
+                result = responseReader.ReadToEnd();
+                responseReader.Close();
+                return result;
+            }
+            catch (Exception e)
+            {
+                result = e.Message;
+            }
+            return result;
+        }
+
 
         public void levantarVentanaSAP(string docEntry, string objectSAP)
         {

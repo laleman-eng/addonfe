@@ -6,18 +6,18 @@ using SAPbouiCOM.Framework;
 using System.Xml;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.Data;
 
-
-namespace AddonFE
+namespace AddonFE.Forms
 {
-    [FormAttribute("AddonFE.FacturaDeudores", "Forms/FacturaDeudores.b1f")]
+    [FormAttribute("133", "Forms/FacturaDeudores.b1f")]
     class SystemForm2 : SystemFormBase
     {
         private static SAPbouiCOM.Form oForm = null;
         private static SAPbobsCOM.Company oCompany = Conexion.oCompany;
         private SAPbobsCOM.Documents oDocument;
-
-
+        private static string classid = "Factura Deudores";
+        
         public SystemForm2()
         {
         }
@@ -28,7 +28,7 @@ namespace AddonFE
         public override void OnInitializeComponent()
         {
             this.OnCustomInitialize();
-            //validarJsonFactura("");
+
         }
 
         /// <summary>
@@ -36,15 +36,16 @@ namespace AddonFE
         /// </summary>
         public override void OnInitializeFormEvents()
         {
-            this.DataAddBefore += new SAPbouiCOM.Framework.FormBase.DataAddBeforeHandler(this.Form_DataAddBefore);
             this.DataAddAfter += new DataAddAfterHandler(this.Form_DataAddAfter);
+            this.DataAddBefore += new DataAddBeforeHandler(this.Form_DataAddBefore);
+
         }
 
-        private void Form_DataAddBefore(ref SAPbouiCOM.BusinessObjectInfo pVal, out bool BubbleEvent)
+        private void Form_DataAddAfter(ref SAPbouiCOM.BusinessObjectInfo pVal)
         {
-            BubbleEvent = true;
             try
             {
+
                 var json = Newtonsoft.Json.Linq.JObject.Parse("{}");
 
                 SAPbouiCOM.DBDataSource oDBDSOINV = oForm.DataSources.DBDataSources.Item("OINV");
@@ -61,6 +62,63 @@ namespace AddonFE
 
                 var jsonFactura = Newtonsoft.Json.JsonConvert.SerializeObject(json);
 
+                var result = enviarJsonFactura(jsonFactura);
+
+                if (result.ToLower().StartsWith("error"))
+                {
+                    Application.SBO_Application.StatusBar.SetText(" " + result, SAPbouiCOM.BoMessageTime.bmt_Short, SAPbouiCOM.BoStatusBarMessageType.smt_Error);
+                    Application.SBO_Application.MessageBox(result);
+                    //analizar el mecanismo de mensaje hacia el usuario y soporte
+                }
+                else
+                {
+                    //objecto DocEntry 
+                    //asigno el folio 
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(classid + ": " + ex.Message);
+            }
+        }
+
+        private void OnCustomInitialize()
+        {
+            oForm = Application.SBO_Application.Forms.Item(this.UIAPIRawForm.UniqueID);
+        }
+
+        private void Form_DataAddBefore(ref SAPbouiCOM.BusinessObjectInfo pVal, out bool BubbleEvent)
+        {
+            BubbleEvent = true;
+            try
+            {
+                var json = Newtonsoft.Json.Linq.JObject.Parse("{}");
+
+                SAPbouiCOM.DBDataSource oDBDSOINV = oForm.DataSources.DBDataSources.Item("OINV");
+                SAPbouiCOM.DBDataSource oDBDSINV1 = oForm.DataSources.DBDataSources.Item("INV1");
+                SAPbouiCOM.DBDataSource oDBDSOCRD = oForm.DataSources.DBDataSources.Item("OCRD");
+
+                //oDBDSOINV.Query("SELECT * FROM OINV");
+                //SapDataTableToDotNetDataTable(oDBDSOINV.GetAsXML());
+
+                XmlDocument xmlOINV = new XmlDocument();
+                xmlOINV.LoadXml(oDBDSOINV.GetAsXML());
+
+                xmlOINV.Save("C:/factura.xml");
+
+                XmlDocument xmlINV1 = new XmlDocument();
+                xmlINV1.LoadXml(oDBDSINV1.GetAsXML());
+
+                XmlDocument xmlOCRD = new XmlDocument();
+                xmlOCRD.LoadXml(oDBDSOCRD.GetAsXML());
+
+
+                json["OINV"] = Newtonsoft.Json.Linq.JObject.Parse(Newtonsoft.Json.JsonConvert.SerializeXmlNode(xmlOINV));
+                json["OCRD"] = Newtonsoft.Json.Linq.JObject.Parse(Newtonsoft.Json.JsonConvert.SerializeXmlNode(xmlOCRD));
+                json["INV1"] = Newtonsoft.Json.Linq.JObject.Parse(Newtonsoft.Json.JsonConvert.SerializeXmlNode(xmlINV1));
+
+                var jsonFactura = Newtonsoft.Json.JsonConvert.SerializeObject(json);
+
                 var result = validarJsonFactura(jsonFactura);
 
                 if (result.ToLower().StartsWith("error"))
@@ -69,31 +127,33 @@ namespace AddonFE
                     Application.SBO_Application.MessageBox(result);
                     BubbleEvent = false;
                 }
-                    
-            }
-           catch (Exception e)
-           {
-                BubbleEvent = false;
-           }
 
+            }
+            catch (Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(classid + ": " + ex.Message);
+                BubbleEvent = false;
+            }
         }
+
 
         private string validarJsonFactura(string json)
         {
-            Jint.Native.JsValue result= null;
+            Jint.Native.JsValue result = null;
             var engine = new Jint.Engine(cfg => cfg.AllowClr());
             engine.SetValue("jsonString", json);
             var p = new SboJint();
             engine.SetValue("sbo", p);
-            string script = System.IO.File.ReadAllText("script/val33DC.jint");
             try
             {
+                string script = System.IO.File.ReadAllText("script/ValFacturaApirestFE3.jint");
+           
                 engine.Execute(script);
                 result = engine.Invoke("execute");
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                Console.Write(e.Message);
+                System.Windows.Forms.MessageBox.Show(classid + ": " + ex.Message);
             }
 
             return result.ToString();
@@ -121,56 +181,44 @@ namespace AddonFE
         }
 
 
-        private void OnCustomInitialize()
+        public DataTable SapDataTableToDotNetDataTable(string xmlSap)
         {
-            oForm = Application.SBO_Application.Forms.Item(this.UIAPIRawForm.UniqueID);
+            var DT = new DataTable();
 
-        }
+            //var XMLstream = new System.IO.FileStream(pathToXmlFile, FileMode.Open);
 
-        private void Form_DataAddAfter(ref SAPbouiCOM.BusinessObjectInfo pVal)
-        {
-            try
+            var XDoc = System.Xml.Linq.XDocument.Load(xmlSap);
+
+            var Columns = XDoc.Element("DataTable").Element("Columns").Elements("Column");
+
+            foreach (var Column in Columns)
             {
-               
-                var json = Newtonsoft.Json.Linq.JObject.Parse("{}");
+                DT.Columns.Add(Column.Attribute("Uid").Value);
+            }
 
-                SAPbouiCOM.DBDataSource oDBDSOINV = oForm.DataSources.DBDataSources.Item("OINV");
-                SAPbouiCOM.DBDataSource oDBDSINV1 = oForm.DataSources.DBDataSources.Item("INV1");
+            var Rows = XDoc.Element("DataTable").Element("Rows").Elements("Row");
 
-                XmlDocument xmlOINV = new XmlDocument();
-                xmlOINV.LoadXml(oDBDSOINV.GetAsXML());
+            var Names = new List<string>();
+            foreach (var Row in Rows)
+            {
+                var DTRow = DT.NewRow();
 
-                XmlDocument xmlINV1 = new XmlDocument();
-                xmlINV1.LoadXml(oDBDSINV1.GetAsXML());
-
-                json["OINV"] = Newtonsoft.Json.Linq.JObject.Parse(Newtonsoft.Json.JsonConvert.SerializeXmlNode(xmlOINV));
-                json["INV1"] = Newtonsoft.Json.Linq.JObject.Parse(Newtonsoft.Json.JsonConvert.SerializeXmlNode(xmlINV1));
-
-                var jsonFactura = Newtonsoft.Json.JsonConvert.SerializeObject(json);
-
-                var result = enviarJsonFactura(jsonFactura);
-
-                if (result.ToLower().StartsWith("error"))
+                var Cells = Row.Element("Cells").Elements("Cell");
+                foreach (var Cell in Cells)
                 {
-                    Application.SBO_Application.StatusBar.SetText(" " + result, SAPbouiCOM.BoMessageTime.bmt_Short, SAPbouiCOM.BoStatusBarMessageType.smt_Error);
-                    Application.SBO_Application.MessageBox(result);
-
-                    //analizar el mecanismo de mensaje hacia el usuario y soporte
-                }
-                else
-                {
-
-                    //objecto DocEntry 
-                    //asigno el folio 
-
+                    var ColName = Cell.Element("ColumnUid").Value;
+                    var ColValue = Cell.Element("Value").Value;
+                    DTRow[ColName] = ColValue;
                 }
 
-
+                DT.Rows.Add(DTRow);
             }
-            catch (Exception)
-            {
 
-            }
+            return DT;
         }
+
+
+
+
     }
 }

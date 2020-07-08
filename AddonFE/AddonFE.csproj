@@ -81,11 +81,14 @@
     <Compile Include="Forms\FormInit.b1f.cs">
       <DependentUpon>FormInit.b1f</DependentUpon>
     </Compile>
-    <Compile Include="Forms\WebAppForm.b1f.cs">
-      <DependentUpon>WebAppForm.b1f</DependentUpon>
+    <Compile Include="Forms\Boleta.b1f.cs">
+      <DependentUpon>Boleta.b1f</DependentUpon>
     </Compile>
     <Compile Include="Forms\FacturaDeudores.b1f.cs">
       <DependentUpon>FacturaDeudores.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WebAppForm.b1f.cs">
+      <DependentUpon>WebAppForm.b1f</DependentUpon>
     </Compile>
     <Compile Include="SboJint.cs" />
     <Compile Include="Webserver.cs" />
@@ -102,15 +105,21 @@
     <Compile Include="Program.cs" />
     <Compile Include="Menu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="packages.config" />
-    <None Include="Forms\WebAppForm.b1f">
-      <FormCategory>UserForm</FormCategory>
+    <None Include="Forms\Boleta.b1f">
+      <FormCategory>SystemForm</FormCategory>
+    </None>
+    <None Include="Forms\Boleta.b1f__orig_srf">
+      <DependentUpon>Boleta.b1f</DependentUpon>
     </None>
     <None Include="Forms\FacturaDeudores.b1f">
       <FormCategory>SystemForm</FormCategory>
     </None>
     <None Include="Forms\FacturaDeudores.b1f__orig_srf">
       <DependentUpon>FacturaDeudores.b1f</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Forms\WebAppForm.b1f">
+      <FormCategory>UserForm</FormCategory>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
