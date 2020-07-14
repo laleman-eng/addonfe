@@ -17,7 +17,9 @@ namespace AddonFE.Forms
         private static SAPbobsCOM.Company oCompany = Conexion.oCompany;
         private SAPbobsCOM.Documents oDocument;
         private static string classid = "Factura Deudores";
-        
+        public Jint.Engine engine;
+        SboJint p;
+
         public SystemForm2()
         {
         }
@@ -28,7 +30,9 @@ namespace AddonFE.Forms
         public override void OnInitializeComponent()
         {
             this.OnCustomInitialize();
-
+            engine = new Jint.Engine(cfg => cfg.AllowClr());
+            engine.SetValue("sbo", p);
+            p = new SboJint();
         }
 
         /// <summary>
@@ -87,6 +91,30 @@ namespace AddonFE.Forms
             oForm = Application.SBO_Application.Forms.Item(this.UIAPIRawForm.UniqueID);
         }
 
+        private string retornarRecordset(string  xmlDocument, string table)
+        {
+            try
+            {
+                XmlDocument xml = new XmlDocument();
+                xml.LoadXml(xmlDocument);
+                XmlNodeList list = xml.GetElementsByTagName("row");
+        
+                string content = list.Item(0).InnerXml;;
+
+                XmlDocument docNew = new XmlDocument();
+                XmlElement root = docNew.CreateElement(table);
+                docNew.AppendChild(root);
+                root.InnerXml = content;
+
+                return docNew.OuterXml;
+            }
+            catch (Exception ex)
+            {
+                return "";
+            }
+           
+        }
+
         private void Form_DataAddBefore(ref SAPbouiCOM.BusinessObjectInfo pVal, out bool BubbleEvent)
         {
             BubbleEvent = true;
@@ -97,9 +125,27 @@ namespace AddonFE.Forms
                 SAPbouiCOM.DBDataSource oDBDSOINV = oForm.DataSources.DBDataSources.Item("OINV");
                 SAPbouiCOM.DBDataSource oDBDSINV1 = oForm.DataSources.DBDataSources.Item("INV1");
                 SAPbouiCOM.DBDataSource oDBDSOCRD = oForm.DataSources.DBDataSources.Item("OCRD");
+                SAPbouiCOM.DBDataSource oDBDSOCTG = oForm.DataSources.DBDataSources.Item("OCTG");
 
-                //oDBDSOINV.Query("SELECT * FROM OINV");
-                //SapDataTableToDotNetDataTable(oDBDSOINV.GetAsXML());
+                //OADM
+                string query = @"SELECT |CompnyName|,|CompnyAddr| ,|Country|,|Phone1|,|E_Mail|,
+                |Manager|,|CompType|,|MainCurncy|,|SysCurrncy|,|TaxIdNum|,|XmlPath| FROM |OADM| ";
+                query = query.Replace("|", "\"");
+
+                SAPbobsCOM.Recordset oRs = p.doQuery(query);
+                XmlDocument xmlOADM = new XmlDocument();
+
+                xmlOADM.LoadXml(retornarRecordset(oRs.GetAsXML(),"OADM"));
+
+                //ADM1
+                query = @"SELECT |Street|,|StreetF| ,|Block|,|BlockF|,|City|, |CityF|,
+               |ZipCode|,|ZipCodeF|,|County|,|State|,|Country| ,|IntrntAdrs| FROM |ADM1| ";
+                query = query.Replace("|", "\"");
+
+                oRs = p.doQuery(query);
+                XmlDocument xmlADM1 = new XmlDocument();
+
+                xmlADM1.LoadXml(retornarRecordset(oRs.GetAsXML(), "ADM1"));
 
                 XmlDocument xmlOINV = new XmlDocument();
                 xmlOINV.LoadXml(oDBDSOINV.GetAsXML());
@@ -112,10 +158,16 @@ namespace AddonFE.Forms
                 XmlDocument xmlOCRD = new XmlDocument();
                 xmlOCRD.LoadXml(oDBDSOCRD.GetAsXML());
 
+                XmlDocument xmlOCTG = new XmlDocument();
+                xmlOCTG.LoadXml(oDBDSOCTG.GetAsXML());
+
 
                 json["OINV"] = Newtonsoft.Json.Linq.JObject.Parse(Newtonsoft.Json.JsonConvert.SerializeXmlNode(xmlOINV));
                 json["OCRD"] = Newtonsoft.Json.Linq.JObject.Parse(Newtonsoft.Json.JsonConvert.SerializeXmlNode(xmlOCRD));
                 json["INV1"] = Newtonsoft.Json.Linq.JObject.Parse(Newtonsoft.Json.JsonConvert.SerializeXmlNode(xmlINV1));
+                json["OCTG"] = Newtonsoft.Json.Linq.JObject.Parse(Newtonsoft.Json.JsonConvert.SerializeXmlNode(xmlOCTG));
+                json["OADMS"] = Newtonsoft.Json.Linq.JObject.Parse(Newtonsoft.Json.JsonConvert.SerializeXmlNode(xmlOADM));
+                json["ADM1S"] = Newtonsoft.Json.Linq.JObject.Parse(Newtonsoft.Json.JsonConvert.SerializeXmlNode(xmlADM1));
 
                 var jsonFactura = Newtonsoft.Json.JsonConvert.SerializeObject(json);
 
@@ -140,9 +192,7 @@ namespace AddonFE.Forms
         private string validarJsonFactura(string json)
         {
             Jint.Native.JsValue result = null;
-            var engine = new Jint.Engine(cfg => cfg.AllowClr());
             engine.SetValue("jsonString", json);
-            var p = new SboJint();
             engine.SetValue("sbo", p);
             try
             {

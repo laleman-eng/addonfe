@@ -53,7 +53,7 @@ namespace AddonFE
                 //levante el naveador 
                 oCreationPackage.Type = SAPbouiCOM.BoMenuType.mt_STRING;
                 oCreationPackage.UniqueID = "AddonFE.Navegador";
-                oCreationPackage.String = "Navegador";
+                oCreationPackage.String = "Portal EasyDoc";
                 oMenus.AddEx(oCreationPackage);
 
                 //levante el naveador 
