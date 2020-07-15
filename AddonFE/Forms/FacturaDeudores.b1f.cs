@@ -139,7 +139,7 @@ namespace AddonFE.Forms
 
                 //ADM1
                 query = @"SELECT |Street|,|StreetF| ,|Block|,|BlockF|,|City|, |CityF|,
-               |ZipCode|,|ZipCodeF|,|County|,|State|,|Country| ,|IntrntAdrs| FROM |ADM1| ";
+               |ZipCode|,|ZipCodeF|,|County|,|State|,|Country| ,|IntrntAdrs| , |GlblLocNum| FROM |ADM1| ";
                 query = query.Replace("|", "\"");
 
                 oRs = p.doQuery(query);
