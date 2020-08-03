@@ -6,7 +6,7 @@ using SAPbouiCOM.Framework;
 namespace AddonFE
 {
     [FormAttribute("AddonFE.Parametros", "Forms/Parametros.b1f")]
-    public  class Parametros : UserFormBase
+    public class Parametros : UserFormBase
     {
 
         public SAPbouiCOM.Form oForm;
@@ -51,26 +51,27 @@ namespace AddonFE
 
         private void OnCustomInitialize()
         {
-            try {
+            try
+            {
                 string test = this.UIAPIRawForm.UniqueID;
-            oForm = Application.SBO_Application.Forms.Item(this.UIAPIRawForm.UniqueID);
-            
-
-            oForm.Items.Add("oET01", SAPbouiCOM.BoFormItemTypes.it_EDIT);
-         
-            oForm.Items.Item("oET01").Top = 20;
-            oForm.Items.Item("oET01").Left = 100;
-            oForm.Items.Item("oET01").Width = 50;
+                oForm = Application.SBO_Application.Forms.Item(this.UIAPIRawForm.UniqueID);
 
 
-            SAPbouiCOM.Item oLinkItem = oForm.Items.Add("oLB01", SAPbouiCOM.BoFormItemTypes.it_LINKED_BUTTON);
-            oLinkItem.Left = 80;
-            oLinkItem.Top = 20;
+                oForm.Items.Add("oET01", SAPbouiCOM.BoFormItemTypes.it_EDIT);
+
+                oForm.Items.Item("oET01").Top = 20;
+                oForm.Items.Item("oET01").Left = 100;
+                oForm.Items.Item("oET01").Width = 50;
 
 
-            oLinkItem.LinkTo = "oET01";
-            oLinkedButton = oLinkItem.Specific as SAPbouiCOM.LinkedButton;    
-            oLinkedButton.LinkedObject = SAPbouiCOM.BoLinkedObject.lf_Invoice;
+                SAPbouiCOM.Item oLinkItem = oForm.Items.Add("oLB01", SAPbouiCOM.BoFormItemTypes.it_LINKED_BUTTON);
+                oLinkItem.Left = 80;
+                oLinkItem.Top = 20;
+
+
+                oLinkItem.LinkTo = "oET01";
+                oLinkedButton = oLinkItem.Specific as SAPbouiCOM.LinkedButton;
+                oLinkedButton.LinkedObject = SAPbouiCOM.BoLinkedObject.lf_Invoice;
 
 
             }
@@ -107,9 +108,9 @@ namespace AddonFE
             }
             catch (Exception ex)
             {
-                System.Windows.Forms.MessageBox.Show(classid +": " + ex.Message);
+                System.Windows.Forms.MessageBox.Show(classid + ": " + ex.Message);
             }
-            
+
         }
     }
 }

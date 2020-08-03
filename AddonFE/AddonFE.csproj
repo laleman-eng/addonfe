@@ -13,6 +13,21 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
+    <PublishUrl>publicar\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -87,13 +102,21 @@
     <Compile Include="Forms\FacturaDeudores.b1f.cs">
       <DependentUpon>FacturaDeudores.b1f</DependentUpon>
     </Compile>
+    <Compile Include="Forms\MonitorEstadoDocumentoEnviado.b1f.cs">
+      <DependentUpon>MonitorEstadoDocumentoEnviado.b1f</DependentUpon>
+    </Compile>
     <Compile Include="Forms\WebAppForm.b1f.cs">
       <DependentUpon>WebAppForm.b1f</DependentUpon>
     </Compile>
+    <Compile Include="Models\Menu.cs" />
     <Compile Include="SboJint.cs" />
     <Compile Include="Webserver.cs" />
     <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="Forms\FormInit.b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
+    <None Include="Forms\MonitorEstadoDocumentoEnviado.b1f">
       <FormCategory>UserForm</FormCategory>
     </None>
     <None Include="Forms\Parametros.b1f">
@@ -121,6 +144,18 @@
     <None Include="Forms\WebAppForm.b1f">
       <FormCategory>UserForm</FormCategory>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

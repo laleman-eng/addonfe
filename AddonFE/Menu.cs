@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 using SAPbouiCOM.Framework;
+using System.IO;
+using Newtonsoft.Json;
+using AddonFE.Models;
+
+
 
 namespace AddonFE
 {
@@ -24,6 +29,10 @@ namespace AddonFE
             oCreationPackage.String = "Factura Electronica";
             oCreationPackage.Enabled = true;
             oCreationPackage.Position = -1;
+           
+            //string filePath = @"C:\icon.jpg";
+            //oCreationPackage.Image = filePath;
+
 
             oMenus = oMenuItem.SubMenus;
 
@@ -62,7 +71,28 @@ namespace AddonFE
                 oCreationPackage.String = "FormInit";
                 oMenus.AddEx(oCreationPackage);
 
+                oCreationPackage.Type = SAPbouiCOM.BoMenuType.mt_STRING;
+                oCreationPackage.UniqueID = "AddonFE.Estado Documentos Enviados";
+                oCreationPackage.String = "Estado Documentos Enviados";
+                oMenus.AddEx(oCreationPackage);
 
+                //string jsonMenuPath = @"menu.json";
+                //using (StreamReader jsonStram = File.OpenText(jsonMenuPath))
+                //{
+                //    var json = jsonStram.ReadToEnd();
+                //    //MenuModel menu = JsonConvert.DeserializeObject<MenuModel>(json);
+                //    Root list = JsonConvert.DeserializeObject<Root>(json);
+
+                //    foreach (var modulo in list.Modulo)
+                //    {
+                //        if (modulo.type == "string")
+                //            oCreationPackage.Type = SAPbouiCOM.BoMenuType.mt_STRING;
+
+                //        oCreationPackage.UniqueID = modulo.UniqueID;
+                //        oCreationPackage.String = modulo.String;
+                //        oMenus.AddEx(oCreationPackage);
+                //    }
+                //}
             }
             catch (Exception er)
             { //  Menu already exists
@@ -76,6 +106,8 @@ namespace AddonFE
 
             try
             {
+
+
                 if (pVal.BeforeAction && pVal.MenuUID == "AddonFE.FormParametros")
                 {
                     Parametros activeForm = new Parametros();
@@ -91,6 +123,11 @@ namespace AddonFE
                     FormInit formInit = new FormInit();
                     formInit.Show();
                 }
+                if (pVal.BeforeAction && pVal.MenuUID == "AddonFE.Estado Documentos Enviados")
+                {
+                    MonitorEstadoDocumentoEnviado monitor = new MonitorEstadoDocumentoEnviado("Estado Documentos Enviados", 1400, 800, "http://localhost:54942/WebForm1.aspx");
+                    monitor.Show();
+                }
 
             }
             catch (Exception ex)
@@ -98,6 +135,8 @@ namespace AddonFE
                 Application.SBO_Application.MessageBox(ex.ToString(), 1, "Ok", "", "");
             }
         }
+
+
 
     }
 }
