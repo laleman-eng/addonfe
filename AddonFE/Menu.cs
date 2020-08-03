@@ -72,8 +72,8 @@ namespace AddonFE
                 oMenus.AddEx(oCreationPackage);
 
                 oCreationPackage.Type = SAPbouiCOM.BoMenuType.mt_STRING;
-                oCreationPackage.UniqueID = "AddonFE.Estado Documentos Enviados";
-                oCreationPackage.String = "Estado Documentos Enviados";
+                oCreationPackage.UniqueID = "AddonFE.Estado documentos enviados";
+                oCreationPackage.String = "Estado documentos enviados";
                 oMenus.AddEx(oCreationPackage);
 
                 //string jsonMenuPath = @"menu.json";
@@ -123,9 +123,9 @@ namespace AddonFE
                     FormInit formInit = new FormInit();
                     formInit.Show();
                 }
-                if (pVal.BeforeAction && pVal.MenuUID == "AddonFE.Estado Documentos Enviados")
+                if (pVal.BeforeAction && pVal.MenuUID == "AddonFE.Estado documentos enviados")
                 {
-                    MonitorEstadoDocumentoEnviado monitor = new MonitorEstadoDocumentoEnviado("Estado Documentos Enviados", 1400, 800, "http://localhost:54942/WebForm1.aspx");
+                    MonitorEstadoDocumentoEnviado monitor = new MonitorEstadoDocumentoEnviado("Estado documentos enviados", 1400, 800, "http://portal.easydoc.cl/index.aspx");
                     monitor.Show();
                 }
 
