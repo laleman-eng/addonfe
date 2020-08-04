@@ -30,8 +30,6 @@ namespace AddonFE
             oCreationPackage.Enabled = true;
             oCreationPackage.Position = -1;
            
-            //string filePath = @"C:\icon.jpg";
-            //oCreationPackage.Image = filePath;
 
 
             oMenus = oMenuItem.SubMenus;
@@ -60,39 +58,27 @@ namespace AddonFE
                 oMenus.AddEx(oCreationPackage);
 
                 //levante el naveador 
-                oCreationPackage.Type = SAPbouiCOM.BoMenuType.mt_STRING;
-                oCreationPackage.UniqueID = "AddonFE.Navegador";
-                oCreationPackage.String = "Portal EasyDoc";
-                oMenus.AddEx(oCreationPackage);
+                //oCreationPackage.Type = SAPbouiCOM.BoMenuType.mt_STRING;
+                //oCreationPackage.UniqueID = "AddonFE.FormInit";
+                //oCreationPackage.String = "FormInit";
+                //oMenus.AddEx(oCreationPackage);
 
-                //levante el naveador 
-                oCreationPackage.Type = SAPbouiCOM.BoMenuType.mt_STRING;
-                oCreationPackage.UniqueID = "AddonFE.FormInit";
-                oCreationPackage.String = "FormInit";
-                oMenus.AddEx(oCreationPackage);
+                string jsonMenuPath = @"params/menu.json";
+                using (StreamReader jsonStram = File.OpenText(jsonMenuPath))
+                {
+                    var json = jsonStram.ReadToEnd();
+                    Root list = JsonConvert.DeserializeObject<Root>(json);
 
-                oCreationPackage.Type = SAPbouiCOM.BoMenuType.mt_STRING;
-                oCreationPackage.UniqueID = "AddonFE.Estado documentos enviados";
-                oCreationPackage.String = "Estado documentos enviados";
-                oMenus.AddEx(oCreationPackage);
+                    foreach (Modulo modulo in list.Modulo)
+                    {
+                        if (modulo.type == "string")
+                            oCreationPackage.Type = SAPbouiCOM.BoMenuType.mt_STRING;
 
-                //string jsonMenuPath = @"menu.json";
-                //using (StreamReader jsonStram = File.OpenText(jsonMenuPath))
-                //{
-                //    var json = jsonStram.ReadToEnd();
-                //    //MenuModel menu = JsonConvert.DeserializeObject<MenuModel>(json);
-                //    Root list = JsonConvert.DeserializeObject<Root>(json);
-
-                //    foreach (var modulo in list.Modulo)
-                //    {
-                //        if (modulo.type == "string")
-                //            oCreationPackage.Type = SAPbouiCOM.BoMenuType.mt_STRING;
-
-                //        oCreationPackage.UniqueID = modulo.UniqueID;
-                //        oCreationPackage.String = modulo.String;
-                //        oMenus.AddEx(oCreationPackage);
-                //    }
-                //}
+                        oCreationPackage.UniqueID = modulo.UniqueID;
+                        oCreationPackage.String = modulo.String;
+                        oMenus.AddEx(oCreationPackage);
+                    }
+                }
             }
             catch (Exception er)
             { //  Menu already exists
@@ -103,30 +89,28 @@ namespace AddonFE
         public void SBO_Application_MenuEvent(ref SAPbouiCOM.MenuEvent pVal, out bool BubbleEvent)
         {
             BubbleEvent = true;
+            Modulo modulo;
 
             try
             {
-
 
                 if (pVal.BeforeAction && pVal.MenuUID == "AddonFE.FormParametros")
                 {
                     Parametros activeForm = new Parametros();
                     activeForm.Show();
                 }
-                if (pVal.BeforeAction && pVal.MenuUID == "AddonFE.Navegador")
+                //if (pVal.BeforeAction && pVal.MenuUID == "AddonFE.FormInit")
+                //{
+                //    FormInit formInit = new FormInit();
+                //    formInit.Show();
+                //}
+
+                if (pVal.BeforeAction && menuOption(pVal.MenuUID, out modulo) == true)
                 {
-                    WebAppForm webAppForm = new WebAppForm();
+
+                    WebAppForm webAppForm = new WebAppForm(modulo.title, modulo.width, modulo.height, modulo.url);
                     webAppForm.Show();
-                }
-                if (pVal.BeforeAction && pVal.MenuUID == "AddonFE.FormInit")
-                {
-                    FormInit formInit = new FormInit();
-                    formInit.Show();
-                }
-                if (pVal.BeforeAction && pVal.MenuUID == "AddonFE.Estado documentos enviados")
-                {
-                    MonitorEstadoDocumentoEnviado monitor = new MonitorEstadoDocumentoEnviado("Estado documentos enviados", 1400, 800, "http://portal.easydoc.cl/index.aspx");
-                    monitor.Show();
+
                 }
 
             }
@@ -137,6 +121,26 @@ namespace AddonFE
         }
 
 
+        public bool menuOption(string id, out Modulo modulo)
+        {
+            string jsonMenuPath = @"params/menu.json";
+            using (StreamReader jsonStram = File.OpenText(jsonMenuPath))
+            {
+                var json = jsonStram.ReadToEnd();
+                Root list = JsonConvert.DeserializeObject<Root>(json);
+
+                foreach (Modulo mod in list.Modulo)
+                {
+                    if (id == mod.UniqueID)
+                    {
+                        modulo = mod;
+                        return true;
+                    }
+                }
+            }
+            modulo = null;
+            return false;
+        }
 
     }
 }

@@ -102,21 +102,15 @@
     <Compile Include="Forms\FacturaDeudores.b1f.cs">
       <DependentUpon>FacturaDeudores.b1f</DependentUpon>
     </Compile>
-    <Compile Include="Forms\MonitorEstadoDocumentoEnviado.b1f.cs">
-      <DependentUpon>MonitorEstadoDocumentoEnviado.b1f</DependentUpon>
-    </Compile>
     <Compile Include="Forms\WebAppForm.b1f.cs">
       <DependentUpon>WebAppForm.b1f</DependentUpon>
     </Compile>
-    <Compile Include="Models\Menu.cs" />
+    <Compile Include="Models\Modulo.cs" />
     <Compile Include="SboJint.cs" />
     <Compile Include="Webserver.cs" />
     <None Include="app.config" />
     <None Include="ClassDiagram1.cd" />
     <None Include="Forms\FormInit.b1f">
-      <FormCategory>UserForm</FormCategory>
-    </None>
-    <None Include="Forms\MonitorEstadoDocumentoEnviado.b1f">
       <FormCategory>UserForm</FormCategory>
     </None>
     <None Include="Forms\Parametros.b1f">

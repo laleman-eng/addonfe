@@ -13,6 +13,11 @@ namespace AddonFE.Models
         public string type { get; set; }
         public string UniqueID { get; set; }
         public string String { get; set; }
+        public string title { get; set; }
+        public int width { get; set; }
+        public int height { get; set; }
+        public string url { get; set; }
+       
     }
 
     public class Root
