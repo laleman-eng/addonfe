@@ -29,7 +29,7 @@ namespace AddonFE
             oCreationPackage.String = "Factura Electronica";
             oCreationPackage.Enabled = true;
             oCreationPackage.Position = -1;
-           
+            //oCreationPackage.Image = 
 
 
             oMenus = oMenuItem.SubMenus;

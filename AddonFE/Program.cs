@@ -6,6 +6,7 @@ using System.Data;
 using System.Xml;
 using System.Net;
 using System.IO;
+using SBOFunctions;
 
 namespace AddonFE
 {
@@ -46,6 +47,8 @@ namespace AddonFE
         static int contador = 0;
         private static string classid = "Program";
 
+        public static SAPbouiCOM.Application SBO_Application = null;
+        public static SAPbobsCOM.Company oCompany = null;
 
         public static string SendResponse(HttpListenerRequest request)
         {
@@ -114,27 +117,27 @@ namespace AddonFE
                 //p.SendJson("http://localhost:2396/api/Factura/validarDocumento", jsonSAP);
 
                 //p.incremetar();
-                string query = @"SELECT |DocEntry| , |DocNum| FROM |OINV| WHERE |DocNum| = 2006704";
-                query = query.Replace("|", "\"");
-                SAPbobsCOM.Recordset oRs = p.doQuery(query);
-                int a = oRs.RecordCount;
+//                string query = @"SELECT |DocEntry| , |DocNum| FROM |OINV| WHERE |DocNum| = 2006704";
+//                query = query.Replace("|", "\"");
+//                SAPbobsCOM.Recordset oRs = p.doQuery(query);
+//                int a = oRs.RecordCount;
 
-                engine.SetValue("sbo", p);
+//                engine.SetValue("sbo", p);
 
-                string script = @"
-                var result;
-                function execute()
-                {
-                    var query ='SELECT |DocEntry|,|DocNum| FROM |OINV| WHERE |DocNum| = 2006704';   
-                    var rs = sbo.doJson(query);  
-                    result = rs;
-                    return result;
-                }";
-                script = script.Replace("|", "\"");
+//                string script = @"
+//                var result;
+//                function execute()
+//                {
+//                    var query ='SELECT |DocEntry|,|DocNum| FROM |OINV| WHERE |DocNum| = 2006704';   
+//                    var rs = sbo.doJson(query);  
+//                    result = rs;
+//                    return result;
+//                }";
+//                script = script.Replace("|", "\"");
 
-                engine.Execute(script);
-                Jint.Native.JsValue v = engine.Invoke("execute");
-                var result = engine.GetValue("result");
+//                engine.Execute(script);
+//                Jint.Native.JsValue v = engine.Invoke("execute");
+//                var result = engine.GetValue("result");
                 //Jint.Native.JsValue v = engine.GetCompletionValue();
 
                 // Console.WriteLine(engine.Execute("2+2").GetCompletionValue());
@@ -146,20 +149,82 @@ namespace AddonFE
                 var ws = new Webserver(SendResponse, prefix);
                 ws.Run();
 
-                script = @"
-                    var file = new System.IO.StreamWriter('log.txt');
-                    file.WriteLine('Hello World !');
-                    file.Dispose();
-                    (3 * 3).toString();
-                ";
+//                script = @"
+//                    var file = new System.IO.StreamWriter('log.txt');
+//                    file.WriteLine('Hello World !');
+//                    file.Dispose();
+//                    (3 * 3).toString();
+//                ";
 
-                var url = "http://localhost:50201";
-                var test2 = p.SendText(url, script);
+//                var url = "http://localhost:50201";
+//                var test2 = p.SendText(url, script);
 
                 //validarJson();
 
                 Application.SBO_Application.AppEvent += new SAPbouiCOM._IApplicationEvents_AppEventEventHandler(SBO_Application_AppEvent);
                 Application.SBO_Application.ItemEvent += new SAPbouiCOM._IApplicationEvents_ItemEventEventHandler(SBO_Application_ItemEvent);
+
+                //**************************************************************************************
+                //******************* CODIGO CREACION ESTRUCTURA UDOS Y UDT ****************************
+                //**************************************************************************************
+
+
+                SBO_Application = Application.SBO_Application;
+                oCompany = new SAPbobsCOM.Company();
+                oCompany = (SAPbobsCOM.Company)SBO_Application.Company.GetDICompany();
+
+                SBOFunctions.SBOFunctions CSBOFunctions = new SBOFunctions.SBOFunctions();
+
+                CSBOFunctions.Cmpny = oCompany;
+                CSBOFunctions.SBOApp = SBO_Application;
+                CSBOFunctions.RunningUnderSQLServer = CSBOFunctions.GetRunningUnderSQLServer();
+
+                String sPath = CSBOFunctions.GetPathApp();
+                string XlsFile = sPath + "\\Docs\\UDFFELEC.xls";
+                if (!CSBOFunctions.ValidEstructSHA1(XlsFile))
+                {
+                    CSBOFunctions.AddLog("InitApp: Estructura de datos 1 - Facturación Electronica");
+                    SBO_Application.StatusBar.SetText("Inicializando AddOn Factura Electronica(1).", SAPbouiCOM.BoMessageTime.bmt_Short, SAPbouiCOM.BoStatusBarMessageType.smt_Warning);
+                    if (!CSBOFunctions.SyncTablasUdos("1.1", XlsFile))
+                    {
+                        CSBOFunctions.DeleteSHA1FromTable("EDAG.xls");
+                        CSBOFunctions.AddLog("InitApp: sincronización de Estructura de datos fallo");
+                        SBO_Application.MessageBox("Estructura de datos con problemas, consulte a soporte...", 1, "Ok", "", "");
+                    }
+                }
+
+                XlsFile = sPath + "\\Docs\\UDFFELECCL.xls";
+                if (!CSBOFunctions.ValidEstructSHA1(XlsFile))
+                {
+                    CSBOFunctions.AddLog("InitApp: Estructura de datos 2 - Facturación Electronica CL");
+                    SBO_Application.StatusBar.SetText("Inicializando AddOn Factura Electronica(2).", SAPbouiCOM.BoMessageTime.bmt_Short, SAPbouiCOM.BoStatusBarMessageType.smt_Warning);
+                    if (!CSBOFunctions.SyncTablasUdos("1.1", XlsFile))
+                    {
+                        CSBOFunctions.DeleteSHA1FromTable("UDFFELECCL.xls");
+                        CSBOFunctions.AddLog("InitApp: sincronización de Estructura de datos fallo");
+                        SBO_Application.MessageBox("Estructura de datos con problemas, consulte a soporte...", 1, "Ok", "", "");
+                    }
+                }
+
+
+                XlsFile = sPath + "\\Docs\\UDFSAP.xls";
+                if (!CSBOFunctions.ValidEstructSHA1(XlsFile))
+                {
+                    CSBOFunctions.AddLog("InitApp: Estructura de datos 3 - Facturación Electronica CL");
+                    SBO_Application.StatusBar.SetText("Inicializando AddOn Factura Electronica(3).", SAPbouiCOM.BoMessageTime.bmt_Short, SAPbouiCOM.BoStatusBarMessageType.smt_Warning);
+                    if (!CSBOFunctions.SyncTablasUdos("1.1", XlsFile))
+                    {
+                        CSBOFunctions.DeleteSHA1FromTable("UDFSAP.xls");
+                        CSBOFunctions.AddLog("InitApp: sincronización de Estructura de datos fallo");
+                        SBO_Application.MessageBox("Estructura de datos con problemas, consulte a soporte...", 1, "Ok", "", "");
+                    }
+                }
+
+                //**************************************************************************************
+                //**************************************************************************************
+                //**************************************************************************************
+
+
 
 
 
