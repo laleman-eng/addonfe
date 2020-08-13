@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AddOnRegData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" SlientInstallation="No" SlientUpgrade="No" Partnernmsp="VID" SchemaVersion="3.0" Type="" MultipleVersion="true" OnDemand="" OnPremise="" ExtName="AddonFE" ExtVersion="1.0" Contdata="soportesbo@visualkgroup.com" Partner="Visual Developer" DBType="Both" ClientType="A">
+  <Validity>
+    <SBOCompatibility>
+      <Version From="" To="" />
+    </SBOCompatibility>
+  </Validity>
+  <Configuration>
+    <Repository>
+      <Properties />
+    </Repository>
+    <Deployment>
+      <Properties />
+    </Deployment>
+    <Assignment>
+      <Properties />
+    </Assignment>
+  </Configuration>
+  <Addons>
+    <Addon Name="AddonFE" Group="" ForceFlag="" Visible="" AutoAssign="" SelfUpgrd="">
+      <x86 AddonExe="AddonFE.exe" AddonSig="0D51EA8678221BC8BEF9F8EFB9495E3F" ExeDir="X86Client">
+        <Installation>
+          <Files>
+            <File FileName="X86Client\AddonFE.b1s">
+              <Actions />
+            </File>
+            <File FileName="X86Client\AddonFE.exe">
+              <Actions />
+            </File>
+            <File FileName="X86Client\AddonFE.exe.config">
+              <Actions />
+            </File>
+            <File FileName="X86Client\AddonFE.pdb">
+              <Actions />
+            </File>
+            <File FileName="X86Client\AddonFE.vshost.exe">
+              <Actions />
+            </File>
+            <File FileName="X86Client\AddonFE.vshost.exe.config">
+              <Actions />
+            </File>
+            <File FileName="X86Client\AddonFE.vshost.exe.manifest">
+              <Actions />
+            </File>
+            <File FileName="X86Client\Jint.dll">
+              <Actions />
+            </File>
+            <File FileName="X86Client\log.txt">
+              <Actions />
+            </File>
+            <File FileName="X86Client\Newtonsoft.Json.dll">
+              <Actions />
+            </File>
+            <File FileName="X86Client\Newtonsoft.Json.xml">
+              <Actions />
+            </File>
+            <File FileName="X86Client\SBOFunctions.dll">
+              <Actions />
+            </File>
+            <File FileName="X86Client\VDLog_2020-08-13.log">
+              <Actions />
+            </File>
+            <File FileName="X86Client\Docs\EDRP.xls">
+              <Actions />
+            </File>
+            <File FileName="X86Client\Docs\UDFFELEC.xls">
+              <Actions />
+            </File>
+            <File FileName="X86Client\Docs\UDFFELECCL.xls">
+              <Actions />
+            </File>
+            <File FileName="X86Client\Docs\UDFSAP.xls">
+              <Actions />
+            </File>
+            <File FileName="X86Client\Docs\VID_FECODPAIS.csv">
+              <Actions />
+            </File>
+            <File FileName="X86Client\Docs\VID_FEPTOEMB.csv">
+              <Actions />
+            </File>
+            <File FileName="X86Client\params\menu.json">
+              <Actions />
+            </File>
+            <File FileName="X86Client\script\ValFacturaApirestFE.jint">
+              <Actions />
+            </File>
+            <File FileName="X86Client\script\ValFacturaApirestFE1.jint">
+              <Actions />
+            </File>
+            <File FileName="X86Client\script\ValFacturaApirestFE3.jint">
+              <Actions />
+            </File>
+          </Files>
+        </Installation>
+        <Uninstallation>
+          <Files>
+            <File FileName="X86Client\AddonFE.b1s">
+              <Actions />
+            </File>
+            <File FileName="X86Client\AddonFE.exe">
+              <Actions />
+            </File>
+            <File FileName="X86Client\AddonFE.exe.config">
+              <Actions />
+            </File>
+            <File FileName="X86Client\AddonFE.pdb">
+              <Actions />
+            </File>
+            <File FileName="X86Client\AddonFE.vshost.exe">
+              <Actions />
+            </File>
+            <File FileName="X86Client\AddonFE.vshost.exe.config">
+              <Actions />
+            </File>
+            <File FileName="X86Client\AddonFE.vshost.exe.manifest">
+              <Actions />
+            </File>
+            <File FileName="X86Client\Jint.dll">
+              <Actions />
+            </File>
+            <File FileName="X86Client\log.txt">
+              <Actions />
+            </File>
+            <File FileName="X86Client\Newtonsoft.Json.dll">
+              <Actions />
+            </File>
+            <File FileName="X86Client\Newtonsoft.Json.xml">
+              <Actions />
+            </File>
+            <File FileName="X86Client\SBOFunctions.dll">
+              <Actions />
+            </File>
+            <File FileName="X86Client\VDLog_2020-08-13.log">
+              <Actions />
+            </File>
+            <File FileName="X86Client\Docs\EDRP.xls">
+              <Actions />
+            </File>
+            <File FileName="X86Client\Docs\UDFFELEC.xls">
+              <Actions />
+            </File>
+            <File FileName="X86Client\Docs\UDFFELECCL.xls">
+              <Actions />
+            </File>
+            <File FileName="X86Client\Docs\UDFSAP.xls">
+              <Actions />
+            </File>
+            <File FileName="X86Client\Docs\VID_FECODPAIS.csv">
+              <Actions />
+            </File>
+            <File FileName="X86Client\Docs\VID_FEPTOEMB.csv">
+              <Actions />
+            </File>
+            <File FileName="X86Client\params\menu.json">
+              <Actions />
+            </File>
+            <File FileName="X86Client\script\ValFacturaApirestFE.jint">
+              <Actions />
+            </File>
+            <File FileName="X86Client\script\ValFacturaApirestFE1.jint">
+              <Actions />
+            </File>
+            <File FileName="X86Client\script\ValFacturaApirestFE3.jint">
+              <Actions />
+            </File>
+          </Files>
+        </Uninstallation>
+      </x86>
+      <x64 AddonExe="" AddonSig="">
+        <Installation>
+          <Files />
+        </Installation>
+        <Uninstallation>
+          <Files />
+        </Uninstallation>
+      </x64>
+    </Addon>
+  </Addons>
+  <XApps>
+    <XApp Name="" Path="" FileName="" />
+  </XApps>
+  <UDQs>
+    <UDQ udqname="">
+      <Hana FileName="" />
+    </UDQ>
+  </UDQs>
+</AddOnRegData>

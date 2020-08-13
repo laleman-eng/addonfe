@@ -1,0 +1,513 @@
+13-08-2020 13:09:02 SHA1 UDFFELEC.xls[XgFveaY8XD6M3UBsKVkQArbwHjk=]
+13-08-2020 13:09:02 InitApp: Estructura de datos 1 - Facturación Electronica
+13-08-2020 13:09:04 Numero de registros leidos 162 C:\VisualK\addonfe\AddonFE\bin\x86\Debug\Docs\UDFFELEC.xls
+13-08-2020 13:09:04 AddUserTableWrn: Tabla VID_FELOG previamente creada.
+13-08-2020 13:09:04 AddUserFieldsWrn: Campo - DocEntry Existente.
+13-08-2020 13:09:05 AddUserFieldsWrn: Campo - ObjType Existente.
+13-08-2020 13:09:05 AddUserFieldsWrn: Campo - FolioNum Existente.
+13-08-2020 13:09:05 AddUserFieldsWrn: Campo - SubType Existente.
+13-08-2020 13:09:05 AddUserFieldsWrn: Campo - Status Existente.
+13-08-2020 13:09:05 AddUserFieldValidValueWrn: Valor - EC - Existente para Campo - Status
+13-08-2020 13:09:05 AddUserFieldValidValueWrn: Valor - EE - Existente para Campo - Status
+13-08-2020 13:09:06 AddUserFieldValidValueWrn: Valor - RR - Existente para Campo - Status
+13-08-2020 13:09:06 AddUserFieldValidValueWrn: Valor - RZ - Existente para Campo - Status
+13-08-2020 13:09:06 AddUserFieldValidValueWrn: Valor - AR - Existente para Campo - Status
+13-08-2020 13:09:06 AddUserFieldsWrn: Campo - Message Existente.
+13-08-2020 13:09:06 AddUserFieldsWrn: Campo - TipoDoc Existente.
+13-08-2020 13:09:06 AddUserFieldsWrn: Campo - UserCode Existente.
+13-08-2020 13:09:07 AddUserFieldsWrn: Campo - BaseMul Existente.
+13-08-2020 13:09:07 AddUserFieldsWrn: Campo - DocDate Existente.
+13-08-2020 13:09:07 AddUserFieldsWrn: Campo - Json Existente.
+13-08-2020 13:09:07 AddUserFieldsWrn: Campo - SeriePE Existente.
+13-08-2020 13:09:07 AddUserFieldsWrn: Campo - Id Existente.
+13-08-2020 13:09:07 AddUserFieldsWrn: Campo - Validation Existente.
+13-08-2020 13:09:07 AddUserTableWrn: Tabla VID_FELOGD previamente creada.
+13-08-2020 13:09:07 AddUserFieldsWrn: Campo - ID_Log Existente.
+13-08-2020 13:09:08 AddUserFieldsWrn: Campo - Evento Existente.
+13-08-2020 13:09:08 AddUserFieldsWrn: Campo - Glosa Existente.
+13-08-2020 13:09:08 AddUserFieldsWrn: Campo - FechaIn Existente.
+13-08-2020 13:09:08 AddUserFieldsWrn: Campo - TipoEvento Existente.
+13-08-2020 13:09:08 AddUserTableWrn: Tabla VID_FEPARAM previamente creada.
+13-08-2020 13:09:09 AddUserFieldsWrn: Campo - Servidor Existente.
+13-08-2020 13:09:09 AddUserFieldsWrn: Campo - Base Existente.
+13-08-2020 13:09:09 AddUserFieldsWrn: Campo - Usuario Existente.
+13-08-2020 13:09:09 AddUserFieldsWrn: Campo - Password Existente.
+13-08-2020 13:09:09 AddUserFieldsWrn: Campo - MonLocal Existente.
+13-08-2020 13:09:09 AddUserFieldsWrn: Campo - FolioGuia Existente.
+13-08-2020 13:09:09 AddUserFieldValidValueWrn: Valor - Y - Existente para Campo - FolioGuia
+13-08-2020 13:09:10 AddUserFieldValidValueWrn: Valor - N - Existente para Campo - FolioGuia
+13-08-2020 13:09:10 AddUserFieldsWrn: Campo - BlqPrint Existente.
+13-08-2020 13:09:10 AddUserFieldValidValueWrn: Valor - Y - Existente para Campo - BlqPrint
+13-08-2020 13:09:10 AddUserFieldValidValueWrn: Valor - N - Existente para Campo - BlqPrint
+13-08-2020 13:09:10 AddUserFieldsWrn: Campo - Distrib Existente.
+13-08-2020 13:09:10 AddUserFieldValidValueWrn: Valor - Y - Existente para Campo - Distrib
+13-08-2020 13:09:10 AddUserFieldValidValueWrn: Valor - N - Existente para Campo - Distrib
+13-08-2020 13:09:11 AddUserFieldsWrn: Campo - FPortal Existente.
+13-08-2020 13:09:11 AddUserFieldValidValueWrn: Valor - Y - Existente para Campo - FPortal
+13-08-2020 13:09:11 AddUserFieldValidValueWrn: Valor - N - Existente para Campo - FPortal
+13-08-2020 13:09:11 AddUserFieldsWrn: Campo - DteSolTras Existente.
+13-08-2020 13:09:11 AddUserFieldValidValueWrn: Valor - Y - Existente para Campo - DteSolTras
+13-08-2020 13:09:11 AddUserFieldValidValueWrn: Valor - N - Existente para Campo - DteSolTras
+13-08-2020 13:09:11 AddUserFieldsWrn: Campo - Val90 Existente.
+13-08-2020 13:09:12 AddUserFieldValidValueWrn: Valor - Y - Existente para Campo - Val90
+13-08-2020 13:09:12 AddUserFieldValidValueWrn: Valor - N - Existente para Campo - Val90
+13-08-2020 13:09:12 AddUserFieldsWrn: Campo - MultiSoc Existente.
+13-08-2020 13:09:12 AddUserFieldValidValueWrn: Valor - Y - Existente para Campo - MultiSoc
+13-08-2020 13:09:12 AddUserFieldValidValueWrn: Valor - N - Existente para Campo - MultiSoc
+13-08-2020 13:09:12 AddUserFieldsWrn: Campo - ValDescL Existente.
+13-08-2020 13:09:12 AddUserFieldValidValueWrn: Valor - Y - Existente para Campo - ValDescL
+13-08-2020 13:09:12 AddUserFieldValidValueWrn: Valor - N - Existente para Campo - ValDescL
+13-08-2020 13:09:13 AddUserFieldsWrn: Campo - OficinaSII Existente.
+13-08-2020 13:09:13 AddUserFieldsWrn: Campo - GenerarT Existente.
+13-08-2020 13:09:13 AddUserFieldValidValueWrn: Valor - Y - Existente para Campo - GenerarT
+13-08-2020 13:09:13 AddUserFieldValidValueWrn: Valor - N - Existente para Campo - GenerarT
+13-08-2020 13:09:13 AddUserFieldsWrn: Campo - ProcVenta Existente.
+13-08-2020 13:09:13 AddUserFieldsWrn: Campo - ProcCompra Existente.
+13-08-2020 13:09:13 AddUserFieldsWrn: Campo - ProcBol Existente.
+13-08-2020 13:09:13 AddUserFieldsWrn: Campo - ProcGuia Existente.
+13-08-2020 13:09:14 AddUserFieldsWrn: Campo - FechaRes Existente.
+13-08-2020 13:09:14 AddUserFieldsWrn: Campo - AbrirDoc Existente.
+13-08-2020 13:09:14 AddUserFieldValidValueWrn: Valor - Y - Existente para Campo - AbrirDoc
+13-08-2020 13:09:14 AddUserFieldValidValueWrn: Valor - N - Existente para Campo - AbrirDoc
+13-08-2020 13:09:14 AddUserFieldsWrn: Campo - NumRes Existente.
+13-08-2020 13:09:14 AddUserFieldsWrn: Campo - BuscarCAF Existente.
+13-08-2020 13:09:14 AddUserFieldsWrn: Campo - httpBol Existente.
+13-08-2020 13:09:15 AddUserFieldsWrn: Campo - SubirSuc Existente.
+13-08-2020 13:09:15 AddUserFieldValidValueWrn: Valor - Y - Existente para Campo - SubirSuc
+13-08-2020 13:09:15 AddUserFieldValidValueWrn: Valor - N - Existente para Campo - SubirSuc
+13-08-2020 13:09:15 AddUserFieldsWrn: Campo - URLEasyDot Existente.
+13-08-2020 13:09:15 AddUserFieldsWrn: Campo - UserED Existente.
+13-08-2020 13:09:15 AddUserFieldsWrn: Campo - PwdED Existente.
+13-08-2020 13:09:15 AddUserFieldsWrn: Campo - CantImp Existente.
+13-08-2020 13:09:15 AddUserFieldsWrn: Campo - ImpFiscal Existente.
+13-08-2020 13:09:16 AddUserFieldValidValueWrn: Valor - Y - Existente para Campo - ImpFiscal
+13-08-2020 13:09:16 AddUserFieldValidValueWrn: Valor - N - Existente para Campo - ImpFiscal
+13-08-2020 13:09:16 AddUserFieldsWrn: Campo - NomImp Existente.
+13-08-2020 13:09:16 AddUserFieldsWrn: Campo - Mails_CL Existente.
+13-08-2020 13:09:16 AddUserFieldsWrn: Campo - UserWSCL Existente.
+13-08-2020 13:09:16 AddUserFieldsWrn: Campo - PassWSCL Existente.
+13-08-2020 13:09:16 AddUserFieldsWrn: Campo - CrearDocC Existente.
+13-08-2020 13:09:16 AddUserFieldValidValueWrn: Valor - Y - Existente para Campo - CrearDocC
+13-08-2020 13:09:17 AddUserFieldValidValueWrn: Valor - N - Existente para Campo - CrearDocC
+13-08-2020 13:09:17 AddUserFieldsWrn: Campo - CrearDocCS Existente.
+13-08-2020 13:09:17 AddUserFieldValidValueWrn: Valor - Y - Existente para Campo - CrearDocCS
+13-08-2020 13:09:17 AddUserFieldValidValueWrn: Valor - N - Existente para Campo - CrearDocCS
+13-08-2020 13:09:18 AddUserFieldsWrn: Campo - OP18 Existente.
+13-08-2020 13:09:18 AddUserFieldsWrn: Campo - OP8 Existente.
+13-08-2020 13:09:18 AddUserFieldsWrn: Campo - URLPDF Existente.
+13-08-2020 13:09:18 AddUserFieldsWrn: Campo - MostrarXML Existente.
+13-08-2020 13:09:18 AddUserFieldValidValueWrn: Valor - Y - Existente para Campo - MostrarXML
+13-08-2020 13:09:19 AddUserFieldValidValueWrn: Valor - N - Existente para Campo - MostrarXML
+13-08-2020 13:09:19 AddUserFieldsWrn: Campo - FProv Existente.
+13-08-2020 13:09:20 AddUserFieldValidValueWrn: Valor - Y - Existente para Campo - FProv
+13-08-2020 13:09:20 AddUserFieldValidValueWrn: Valor - N - Existente para Campo - FProv
+13-08-2020 13:09:20 AddUserFieldsWrn: Campo - DiasOC Existente.
+13-08-2020 13:09:20 AddUserFieldsWrn: Campo - DifPor Existente.
+13-08-2020 13:09:20 AddUserFieldsWrn: Campo - DifMon Existente.
+13-08-2020 13:09:20 AddUserFieldsWrn: Campo - TipoDif Existente.
+13-08-2020 13:09:20 AddUserFieldValidValueWrn: Valor - M - Existente para Campo - TipoDif
+13-08-2020 13:09:21 AddUserFieldValidValueWrn: Valor - P - Existente para Campo - TipoDif
+13-08-2020 13:09:21 AddUserFieldsWrn: Campo - EntMer Existente.
+13-08-2020 13:09:21 AddUserFieldValidValueWrn: Valor - Y - Existente para Campo - EntMer
+13-08-2020 13:09:21 AddUserFieldValidValueWrn: Valor - N - Existente para Campo - EntMer
+13-08-2020 13:09:21 AddUserFieldsWrn: Campo - CodEM Existente.
+13-08-2020 13:09:21 AddUserFieldsWrn: Campo - VListNegra Existente.
+13-08-2020 13:09:21 AddUserFieldValidValueWrn: Valor - Y - Existente para Campo - VListNegra
+13-08-2020 13:09:21 AddUserFieldValidValueWrn: Valor - N - Existente para Campo - VListNegra
+13-08-2020 13:09:22 AddUserFieldsWrn: Campo - MListNegra Existente.
+13-08-2020 13:09:22 AddUserFieldValidValueWrn: Valor - Y - Existente para Campo - MListNegra
+13-08-2020 13:09:22 AddUserFieldValidValueWrn: Valor - N - Existente para Campo - MListNegra
+13-08-2020 13:09:22 AddUserFieldsWrn: Campo - MListBlanca Existente.
+13-08-2020 13:09:22 AddUserFieldValidValueWrn: Valor - Y - Existente para Campo - MListBlanca
+13-08-2020 13:09:22 AddUserFieldValidValueWrn: Valor - N - Existente para Campo - MListBlanca
+13-08-2020 13:09:22 AddUserFieldsWrn: Campo - MFacDifer Existente.
+13-08-2020 13:09:22 AddUserFieldValidValueWrn: Valor - Y - Existente para Campo - MFacDifer
+13-08-2020 13:09:22 AddUserFieldValidValueWrn: Valor - N - Existente para Campo - MFacDifer
+13-08-2020 13:09:23 AddUserFieldsWrn: Campo - CEdoPortal Existente.
+13-08-2020 13:09:23 AddUserFieldValidValueWrn: Valor - Y - Existente para Campo - CEdoPortal
+13-08-2020 13:09:23 AddUserFieldValidValueWrn: Valor - N - Existente para Campo - CEdoPortal
+13-08-2020 13:09:23 AddUserFieldsWrn: Campo - BuscarEMDocNum Existente.
+13-08-2020 13:09:23 AddUserFieldValidValueWrn: Valor - Y - Existente para Campo - BuscarEMDocNum
+13-08-2020 13:09:23 AddUserFieldValidValueWrn: Valor - N - Existente para Campo - BuscarEMDocNum
+13-08-2020 13:09:23 AddUserFieldsWrn: Campo - ActDebug Existente.
+13-08-2020 13:09:23 AddUserFieldValidValueWrn: Valor - Y - Existente para Campo - ActDebug
+13-08-2020 13:09:23 AddUserFieldValidValueWrn: Valor - N - Existente para Campo - ActDebug
+13-08-2020 13:09:24 AddUserFieldsWrn: Campo - GenReport Existente.
+13-08-2020 13:09:24 AddUserFieldValidValueWrn: Valor - Y - Existente para Campo - GenReport
+13-08-2020 13:09:24 AddUserFieldValidValueWrn: Valor - N - Existente para Campo - GenReport
+13-08-2020 13:09:24 AddUserFieldsWrn: Campo - TpoReport Existente.
+13-08-2020 13:09:24 AddUserFieldValidValueWrn: Valor - C - Existente para Campo - TpoReport
+13-08-2020 13:09:24 AddUserFieldValidValueWrn: Valor - S - Existente para Campo - TpoReport
+13-08-2020 13:09:24 AddUserFieldsOk: Campo - TopStatus Ok.
+13-08-2020 13:09:25 AddUserFieldValidValueOk: Valid Value - TopStatus Ok.
+13-08-2020 13:09:25 AddUserFieldValidValueOk: Valid Value - TopStatus Ok.
+13-08-2020 13:09:25 AddUserTableWrn: Tabla VID_FEPROCED previamente creada.
+13-08-2020 13:09:25 AddUserFieldsWrn: Campo - TipoDoc Existente.
+13-08-2020 13:09:26 AddUserFieldValidValueWrn: Valor - 33 - Existente para Campo - TipoDoc
+13-08-2020 13:09:26 AddUserFieldValidValueWrn: Valor - 34 - Existente para Campo - TipoDoc
+13-08-2020 13:09:26 AddUserFieldValidValueWrn: Valor - 39 - Existente para Campo - TipoDoc
+13-08-2020 13:09:26 AddUserFieldValidValueWrn: Valor - 41 - Existente para Campo - TipoDoc
+13-08-2020 13:09:26 AddUserFieldValidValueWrn: Valor - 43 - Existente para Campo - TipoDoc
+13-08-2020 13:09:26 AddUserFieldValidValueWrn: Valor - 46 - Existente para Campo - TipoDoc
+13-08-2020 13:09:26 AddUserFieldValidValueWrn: Valor - 52 - Existente para Campo - TipoDoc
+13-08-2020 13:09:26 AddUserFieldValidValueWrn: Valor - 56 - Existente para Campo - TipoDoc
+13-08-2020 13:09:27 AddUserFieldValidValueWrn: Valor - 61 - Existente para Campo - TipoDoc
+13-08-2020 13:09:27 AddUserFieldValidValueWrn: Valor - 110 - Existente para Campo - TipoDoc
+13-08-2020 13:09:27 AddUserFieldValidValueWrn: Valor - 111 - Existente para Campo - TipoDoc
+13-08-2020 13:09:27 AddUserFieldValidValueWrn: Valor - 112 - Existente para Campo - TipoDoc
+13-08-2020 13:09:27 AddUserFieldsWrn: Campo - ProcNomE Existente.
+13-08-2020 13:09:27 AddUserFieldsWrn: Campo - Habili Existente.
+13-08-2020 13:09:28 AddUserFieldValidValueWrn: Valor - Y - Existente para Campo - Habili
+13-08-2020 13:09:28 AddUserFieldValidValueWrn: Valor - N - Existente para Campo - Habili
+13-08-2020 13:09:28 AddUserFieldsWrn: Campo - ProcNomD Existente.
+13-08-2020 13:09:28 AddUserFieldsWrn: Campo - ProcNomR Existente.
+13-08-2020 13:09:28 AddUserFieldsWrn: Campo - ProcNomL Existente.
+13-08-2020 13:09:28 AddUserFieldsWrn: Campo - ProcNomS Existente.
+13-08-2020 13:09:28 AddUserFieldsWrn: Campo - CantLineas Existente.
+13-08-2020 13:09:28 AddUserFieldsWrn: Campo - ProcNomDe Existente.
+13-08-2020 13:09:29 AddUserFieldsWrn: Campo - BaseMul Existente.
+13-08-2020 13:09:29 AddUserFieldsWrn: Campo - ProcNomC Existente.
+13-08-2020 13:09:29 AddUDOWrn: AddUDO - VID_FELOG Existente.
+13-08-2020 13:09:29 UDODefBasicOk: UDODefBasic - VID_FELOG Datos no modificados.
+13-08-2020 13:09:29 AddUDOWrn: AddUDO - VID_FEPARAM Existente.
+13-08-2020 13:09:29 UDODefBasicOk: UDODefBasic - VID_FEPARAM Datos no modificados.
+13-08-2020 13:09:29 AddUDOWrn: AddUDO - VID_FEPROCED Existente.
+13-08-2020 13:09:29 UDODefBasicOk: UDODefBasic - VID_FEPROCED Datos no modificados.
+13-08-2020 13:09:29 SHA1 UDFFELECCL.xls[hKW0v67lpUCpTG0LgtYEvo9Pp3k=]
+13-08-2020 13:09:29 SHA1 UDFSAP.xls[dcIY9r/rBh/vjg2/q3Ib90MT3pQ=]
+13-08-2020 13:09:29 InitApp: Estructura de datos 3 - Facturación Electronica CL
+13-08-2020 13:09:30 Numero de registros leidos 324 C:\VisualK\addonfe\AddonFE\bin\x86\Debug\Docs\UDFSAP.xls
+13-08-2020 13:09:30 Tabla SBO: ODLN
+13-08-2020 13:09:30 AddUserFieldsWrn: Campo - TipDespacho Existente.
+13-08-2020 13:09:30 AddUserFieldValidValueWrn: Valor - 1 - Existente para Campo - TipDespacho
+13-08-2020 13:09:30 AddUserFieldValidValueWrn: Valor - 2 - Existente para Campo - TipDespacho
+13-08-2020 13:09:30 AddUserFieldValidValueWrn: Valor - 3 - Existente para Campo - TipDespacho
+13-08-2020 13:09:30 AddUserFieldsWrn: Campo - Traslado Existente.
+13-08-2020 13:09:30 AddUserFieldValidValueWrn: Valor - 1 - Existente para Campo - Traslado
+13-08-2020 13:09:31 AddUserFieldValidValueWrn: Valor - 2 - Existente para Campo - Traslado
+13-08-2020 13:09:31 AddUserFieldValidValueWrn: Valor - 3 - Existente para Campo - Traslado
+13-08-2020 13:09:31 AddUserFieldValidValueWrn: Valor - 4 - Existente para Campo - Traslado
+13-08-2020 13:09:31 AddUserFieldValidValueWrn: Valor - 5 - Existente para Campo - Traslado
+13-08-2020 13:09:31 AddUserFieldValidValueWrn: Valor - 6 - Existente para Campo - Traslado
+13-08-2020 13:09:31 AddUserFieldValidValueWrn: Valor - 7 - Existente para Campo - Traslado
+13-08-2020 13:09:31 AddUserFieldValidValueWrn: Valor - 8 - Existente para Campo - Traslado
+13-08-2020 13:09:32 AddUserFieldValidValueWrn: Valor - 9 - Existente para Campo - Traslado
+13-08-2020 13:09:32 AddUserFieldsWrn: Campo - FETimbre Existente.
+13-08-2020 13:09:32 AddUserFieldsWrn: Campo - EstadoFE Existente.
+13-08-2020 13:09:32 AddUserFieldValidValueWrn: Valor - A - Existente para Campo - EstadoFE
+13-08-2020 13:09:32 AddUserFieldValidValueWrn: Valor - E - Existente para Campo - EstadoFE
+13-08-2020 13:09:32 AddUserFieldValidValueWrn: Valor - R - Existente para Campo - EstadoFE
+13-08-2020 13:09:32 AddUserFieldValidValueWrn: Valor - P - Existente para Campo - EstadoFE
+13-08-2020 13:09:32 AddUserFieldValidValueWrn: Valor - N - Existente para Campo - EstadoFE
+13-08-2020 13:09:33 AddUserFieldsWrn: Campo - CodIVANoRec Existente.
+13-08-2020 13:09:33 AddUserFieldValidValueWrn: Valor - 1 - Existente para Campo - CodIVANoRec
+13-08-2020 13:09:33 AddUserFieldValidValueWrn: Valor - 2 - Existente para Campo - CodIVANoRec
+13-08-2020 13:09:33 AddUserFieldValidValueWrn: Valor - 3 - Existente para Campo - CodIVANoRec
+13-08-2020 13:09:33 AddUserFieldValidValueWrn: Valor - 4 - Existente para Campo - CodIVANoRec
+13-08-2020 13:09:33 AddUserFieldValidValueWrn: Valor - 9 - Existente para Campo - CodIVANoRec
+13-08-2020 13:09:33 Tabla SBO: OINV
+13-08-2020 13:09:33 AddUserFieldsWrn: Campo - VK_Patente Existente.
+13-08-2020 13:09:34 AddUserFieldsWrn: Campo - RutChofer Existente.
+13-08-2020 13:09:34 AddUserFieldsWrn: Campo - NombreChofer Existente.
+13-08-2020 13:09:35 Updating
+13-08-2020 13:09:35 AddUserFieldsErr: -1029 - Campo - CodIVANoRec - [CUFD.TypeID] , 'No puede actualizarse el campo (ODBC -1029)'
+13-08-2020 13:09:35 AddUserFieldsWrn: Campo - 90_dias Existente.
+13-08-2020 13:09:35 AddUserFieldValidValueWrn: Valor - 0 - Existente para Campo - 90_dias
+13-08-2020 13:09:35 AddUserFieldValidValueWrn: Valor - 1 - Existente para Campo - 90_dias
+13-08-2020 13:09:36 AddUserFieldsWrn: Campo - IndServicioBol Existente.
+13-08-2020 13:09:36 AddUserFieldValidValueWrn: Valor - 1 - Existente para Campo - IndServicioBol
+13-08-2020 13:09:36 AddUserFieldValidValueWrn: Valor - 2 - Existente para Campo - IndServicioBol
+13-08-2020 13:09:36 AddUserFieldValidValueWrn: Valor - 3 - Existente para Campo - IndServicioBol
+13-08-2020 13:09:36 AddUserFieldValidValueWrn: Valor - 4 - Existente para Campo - IndServicioBol
+13-08-2020 13:09:36 AddUserFieldsWrn: Campo - CodModVenta Existente.
+13-08-2020 13:09:37 AddUserFieldValidValueWrn: Valor - 1 - Existente para Campo - CodModVenta
+13-08-2020 13:09:37 AddUserFieldValidValueWrn: Valor - 2 - Existente para Campo - CodModVenta
+13-08-2020 13:09:37 AddUserFieldValidValueWrn: Valor - 3 - Existente para Campo - CodModVenta
+13-08-2020 13:09:37 AddUserFieldValidValueWrn: Valor - 4 - Existente para Campo - CodModVenta
+13-08-2020 13:09:37 AddUserFieldValidValueWrn: Valor - 9 - Existente para Campo - CodModVenta
+13-08-2020 13:09:37 AddUserFieldsWrn: Campo - CodClauVenta Existente.
+13-08-2020 13:09:38 AddUserFieldValidValueWrn: Valor - 1 - Existente para Campo - CodClauVenta
+13-08-2020 13:09:38 AddUserFieldValidValueWrn: Valor - 10 - Existente para Campo - CodClauVenta
+13-08-2020 13:09:38 AddUserFieldValidValueWrn: Valor - 11 - Existente para Campo - CodClauVenta
+13-08-2020 13:09:38 AddUserFieldValidValueWrn: Valor - 12 - Existente para Campo - CodClauVenta
+13-08-2020 13:09:38 AddUserFieldValidValueWrn: Valor - 17 - Existente para Campo - CodClauVenta
+13-08-2020 13:09:38 AddUserFieldValidValueWrn: Valor - 18 - Existente para Campo - CodClauVenta
+13-08-2020 13:09:39 AddUserFieldValidValueWrn: Valor - 2 - Existente para Campo - CodClauVenta
+13-08-2020 13:09:39 AddUserFieldValidValueWrn: Valor - 3 - Existente para Campo - CodClauVenta
+13-08-2020 13:09:39 AddUserFieldValidValueWrn: Valor - 4 - Existente para Campo - CodClauVenta
+13-08-2020 13:09:39 AddUserFieldValidValueWrn: Valor - 5 - Existente para Campo - CodClauVenta
+13-08-2020 13:09:39 AddUserFieldValidValueWrn: Valor - 6 - Existente para Campo - CodClauVenta
+13-08-2020 13:09:40 AddUserFieldValidValueWrn: Valor - 8 - Existente para Campo - CodClauVenta
+13-08-2020 13:09:40 AddUserFieldValidValueWrn: Valor - 9 - Existente para Campo - CodClauVenta
+13-08-2020 13:09:40 AddUserFieldsWrn: Campo - TotClauVenta Existente.
+13-08-2020 13:09:40 AddUserFieldsWrn: Campo - CodViaTransp Existente.
+13-08-2020 13:09:41 AddUserFieldValidValueWrn: Valor - 1 - Existente para Campo - CodViaTransp
+13-08-2020 13:09:41 AddUserFieldValidValueWrn: Valor - 10 - Existente para Campo - CodViaTransp
+13-08-2020 13:09:41 AddUserFieldValidValueWrn: Valor - 4 - Existente para Campo - CodViaTransp
+13-08-2020 13:09:41 AddUserFieldValidValueWrn: Valor - 5 - Existente para Campo - CodViaTransp
+13-08-2020 13:09:41 AddUserFieldValidValueWrn: Valor - 6 - Existente para Campo - CodViaTransp
+13-08-2020 13:09:42 AddUserFieldValidValueWrn: Valor - 7 - Existente para Campo - CodViaTransp
+13-08-2020 13:09:42 AddUserFieldValidValueWrn: Valor - 8 - Existente para Campo - CodViaTransp
+13-08-2020 13:09:42 AddUserFieldValidValueWrn: Valor - 9 - Existente para Campo - CodViaTransp
+13-08-2020 13:09:42 AddUserFieldsWrn: Campo - NombreTransp Existente.
+13-08-2020 13:09:43 AddUserFieldsWrn: Campo - RUTCiaTransp Existente.
+13-08-2020 13:09:43 AddUserFieldsWrn: Campo - NomCiaTransp Existente.
+13-08-2020 13:09:43 AddUserFieldsWrn: Campo - IdAdicTransp Existente.
+13-08-2020 13:09:43 AddUserFieldsWrn: Campo - Booking Existente.
+13-08-2020 13:09:43 AddUserFieldsWrn: Campo - Operador Existente.
+13-08-2020 13:09:44 AddUserFieldsWrn: Campo - CodPtoEmbarque Existente.
+13-08-2020 13:09:45 AddUserFieldLinkedTableOk: Valid Value - CodPtoEmbarque Ok.
+13-08-2020 13:09:45 AddUserFieldsWrn: Campo - IdAdicPtoEmb Existente.
+13-08-2020 13:09:46 AddUserFieldsWrn: Campo - CodPtoDesemb Existente.
+13-08-2020 13:09:47 AddUserFieldLinkedTableOk: Valid Value - CodPtoDesemb Ok.
+13-08-2020 13:09:47 AddUserFieldsWrn: Campo - IdAdicPtoDesemb Existente.
+13-08-2020 13:09:47 AddUserFieldsWrn: Campo - Tara Existente.
+13-08-2020 13:09:48 AddUserFieldsWrn: Campo - CodUnidMedTara Existente.
+13-08-2020 13:09:48 AddUserFieldValidValueWrn: Valor - 1 - Existente para Campo - CodUnidMedTara
+13-08-2020 13:09:48 AddUserFieldValidValueWrn: Valor - 10 - Existente para Campo - CodUnidMedTara
+13-08-2020 13:09:48 AddUserFieldValidValueWrn: Valor - 11 - Existente para Campo - CodUnidMedTara
+13-08-2020 13:09:48 AddUserFieldValidValueWrn: Valor - 12 - Existente para Campo - CodUnidMedTara
+13-08-2020 13:09:48 AddUserFieldValidValueWrn: Valor - 13 - Existente para Campo - CodUnidMedTara
+13-08-2020 13:09:48 AddUserFieldValidValueWrn: Valor - 14 - Existente para Campo - CodUnidMedTara
+13-08-2020 13:09:49 AddUserFieldValidValueWrn: Valor - 15 - Existente para Campo - CodUnidMedTara
+13-08-2020 13:09:49 AddUserFieldValidValueWrn: Valor - 16 - Existente para Campo - CodUnidMedTara
+13-08-2020 13:09:49 AddUserFieldValidValueWrn: Valor - 17 - Existente para Campo - CodUnidMedTara
+13-08-2020 13:09:49 AddUserFieldValidValueWrn: Valor - 18 - Existente para Campo - CodUnidMedTara
+13-08-2020 13:09:49 AddUserFieldValidValueWrn: Valor - 19 - Existente para Campo - CodUnidMedTara
+13-08-2020 13:09:50 AddUserFieldValidValueWrn: Valor - 2 - Existente para Campo - CodUnidMedTara
+13-08-2020 13:09:50 AddUserFieldValidValueWrn: Valor - 20 - Existente para Campo - CodUnidMedTara
+13-08-2020 13:09:50 AddUserFieldValidValueWrn: Valor - 23 - Existente para Campo - CodUnidMedTara
+13-08-2020 13:09:50 AddUserFieldValidValueWrn: Valor - 24 - Existente para Campo - CodUnidMedTara
+13-08-2020 13:09:51 AddUserFieldValidValueWrn: Valor - 3 - Existente para Campo - CodUnidMedTara
+13-08-2020 13:09:51 AddUserFieldValidValueWrn: Valor - 4 - Existente para Campo - CodUnidMedTara
+13-08-2020 13:09:51 AddUserFieldValidValueWrn: Valor - 5 - Existente para Campo - CodUnidMedTara
+13-08-2020 13:09:51 AddUserFieldValidValueWrn: Valor - 6 - Existente para Campo - CodUnidMedTara
+13-08-2020 13:09:52 AddUserFieldValidValueWrn: Valor - 7 - Existente para Campo - CodUnidMedTara
+13-08-2020 13:09:52 AddUserFieldValidValueWrn: Valor - 8 - Existente para Campo - CodUnidMedTara
+13-08-2020 13:09:52 AddUserFieldValidValueWrn: Valor - 9 - Existente para Campo - CodUnidMedTara
+13-08-2020 13:09:53 AddUserFieldValidValueWrn: Valor - 99 - Existente para Campo - CodUnidMedTara
+13-08-2020 13:09:53 AddUserFieldsWrn: Campo - PesoBruto Existente.
+13-08-2020 13:09:53 AddUserFieldsWrn: Campo - CodUnidPesoBr Existente.
+13-08-2020 13:09:53 AddUserFieldValidValueWrn: Valor - 1 - Existente para Campo - CodUnidPesoBr
+13-08-2020 13:09:54 AddUserFieldValidValueWrn: Valor - 10 - Existente para Campo - CodUnidPesoBr
+13-08-2020 13:09:54 AddUserFieldValidValueWrn: Valor - 11 - Existente para Campo - CodUnidPesoBr
+13-08-2020 13:09:54 AddUserFieldValidValueWrn: Valor - 12 - Existente para Campo - CodUnidPesoBr
+13-08-2020 13:09:54 AddUserFieldValidValueWrn: Valor - 13 - Existente para Campo - CodUnidPesoBr
+13-08-2020 13:09:54 AddUserFieldValidValueWrn: Valor - 14 - Existente para Campo - CodUnidPesoBr
+13-08-2020 13:09:54 AddUserFieldValidValueWrn: Valor - 15 - Existente para Campo - CodUnidPesoBr
+13-08-2020 13:09:55 AddUserFieldValidValueWrn: Valor - 16 - Existente para Campo - CodUnidPesoBr
+13-08-2020 13:09:55 AddUserFieldValidValueWrn: Valor - 17 - Existente para Campo - CodUnidPesoBr
+13-08-2020 13:09:55 AddUserFieldValidValueWrn: Valor - 18 - Existente para Campo - CodUnidPesoBr
+13-08-2020 13:09:56 AddUserFieldValidValueWrn: Valor - 19 - Existente para Campo - CodUnidPesoBr
+13-08-2020 13:09:56 AddUserFieldValidValueWrn: Valor - 2 - Existente para Campo - CodUnidPesoBr
+13-08-2020 13:09:56 AddUserFieldValidValueWrn: Valor - 20 - Existente para Campo - CodUnidPesoBr
+13-08-2020 13:09:56 AddUserFieldValidValueWrn: Valor - 23 - Existente para Campo - CodUnidPesoBr
+13-08-2020 13:09:56 AddUserFieldValidValueWrn: Valor - 24 - Existente para Campo - CodUnidPesoBr
+13-08-2020 13:09:57 AddUserFieldValidValueWrn: Valor - 3 - Existente para Campo - CodUnidPesoBr
+13-08-2020 13:09:57 AddUserFieldValidValueWrn: Valor - 4 - Existente para Campo - CodUnidPesoBr
+13-08-2020 13:09:58 AddUserFieldValidValueWrn: Valor - 5 - Existente para Campo - CodUnidPesoBr
+13-08-2020 13:09:58 AddUserFieldValidValueWrn: Valor - 6 - Existente para Campo - CodUnidPesoBr
+13-08-2020 13:09:58 AddUserFieldValidValueWrn: Valor - 7 - Existente para Campo - CodUnidPesoBr
+13-08-2020 13:09:59 AddUserFieldValidValueWrn: Valor - 8 - Existente para Campo - CodUnidPesoBr
+13-08-2020 13:09:59 AddUserFieldValidValueWrn: Valor - 9 - Existente para Campo - CodUnidPesoBr
+13-08-2020 13:10:00 AddUserFieldValidValueWrn: Valor - 99 - Existente para Campo - CodUnidPesoBr
+13-08-2020 13:10:00 AddUserFieldsWrn: Campo - PesoNeto Existente.
+13-08-2020 13:10:00 AddUserFieldsWrn: Campo - CodUnidPesNet Existente.
+13-08-2020 13:10:00 AddUserFieldValidValueWrn: Valor - 1 - Existente para Campo - CodUnidPesNet
+13-08-2020 13:10:00 AddUserFieldValidValueWrn: Valor - 10 - Existente para Campo - CodUnidPesNet
+13-08-2020 13:10:00 AddUserFieldValidValueWrn: Valor - 11 - Existente para Campo - CodUnidPesNet
+13-08-2020 13:10:00 AddUserFieldValidValueWrn: Valor - 12 - Existente para Campo - CodUnidPesNet
+13-08-2020 13:10:01 AddUserFieldValidValueWrn: Valor - 13 - Existente para Campo - CodUnidPesNet
+13-08-2020 13:10:01 AddUserFieldValidValueWrn: Valor - 14 - Existente para Campo - CodUnidPesNet
+13-08-2020 13:10:01 AddUserFieldValidValueWrn: Valor - 15 - Existente para Campo - CodUnidPesNet
+13-08-2020 13:10:01 AddUserFieldValidValueWrn: Valor - 16 - Existente para Campo - CodUnidPesNet
+13-08-2020 13:10:01 AddUserFieldValidValueWrn: Valor - 17 - Existente para Campo - CodUnidPesNet
+13-08-2020 13:10:01 AddUserFieldValidValueWrn: Valor - 18 - Existente para Campo - CodUnidPesNet
+13-08-2020 13:10:02 AddUserFieldValidValueWrn: Valor - 19 - Existente para Campo - CodUnidPesNet
+13-08-2020 13:10:02 AddUserFieldValidValueWrn: Valor - 2 - Existente para Campo - CodUnidPesNet
+13-08-2020 13:10:02 AddUserFieldValidValueWrn: Valor - 20 - Existente para Campo - CodUnidPesNet
+13-08-2020 13:10:02 AddUserFieldValidValueWrn: Valor - 23 - Existente para Campo - CodUnidPesNet
+13-08-2020 13:10:03 AddUserFieldValidValueWrn: Valor - 24 - Existente para Campo - CodUnidPesNet
+13-08-2020 13:10:03 AddUserFieldValidValueWrn: Valor - 3 - Existente para Campo - CodUnidPesNet
+13-08-2020 13:10:03 AddUserFieldValidValueWrn: Valor - 4 - Existente para Campo - CodUnidPesNet
+13-08-2020 13:10:04 AddUserFieldValidValueWrn: Valor - 5 - Existente para Campo - CodUnidPesNet
+13-08-2020 13:10:04 AddUserFieldValidValueWrn: Valor - 6 - Existente para Campo - CodUnidPesNet
+13-08-2020 13:10:04 AddUserFieldValidValueWrn: Valor - 7 - Existente para Campo - CodUnidPesNet
+13-08-2020 13:10:04 AddUserFieldValidValueWrn: Valor - 8 - Existente para Campo - CodUnidPesNet
+13-08-2020 13:10:05 AddUserFieldValidValueWrn: Valor - 9 - Existente para Campo - CodUnidPesNet
+13-08-2020 13:10:05 AddUserFieldValidValueWrn: Valor - 99 - Existente para Campo - CodUnidPesNet
+13-08-2020 13:10:05 AddUserFieldsWrn: Campo - TotItems Existente.
+13-08-2020 13:10:05 AddUserFieldsWrn: Campo - TotBultos Existente.
+13-08-2020 13:10:05 AddUserFieldsWrn: Campo - CodPaisRecep Existente.
+13-08-2020 13:10:07 AddUserFieldLinkedTableOk: Valid Value - CodPaisRecep Ok.
+13-08-2020 13:10:07 AddUserFieldsWrn: Campo - CodPaisDestin Existente.
+13-08-2020 13:10:08 AddUserFieldLinkedTableOk: Valid Value - CodPaisDestin Ok.
+13-08-2020 13:10:08 AddUserFieldsWrn: Campo - TipoMoneda Existente.
+13-08-2020 13:10:08 AddUserFieldsWrn: Campo - FmaPagExp Existente.
+13-08-2020 13:10:08 AddUserFieldValidValueWrn: Valor - 1 - Existente para Campo - FmaPagExp
+13-08-2020 13:10:09 AddUserFieldValidValueWrn: Valor - 11 - Existente para Campo - FmaPagExp
+13-08-2020 13:10:09 AddUserFieldValidValueWrn: Valor - 12 - Existente para Campo - FmaPagExp
+13-08-2020 13:10:09 AddUserFieldValidValueWrn: Valor - 2 - Existente para Campo - FmaPagExp
+13-08-2020 13:10:09 AddUserFieldValidValueWrn: Valor - 21 - Existente para Campo - FmaPagExp
+13-08-2020 13:10:09 AddUserFieldValidValueWrn: Valor - 32 - Existente para Campo - FmaPagExp
+13-08-2020 13:10:10 AddUserFieldValidValueWrn: Valor - 50 - Existente para Campo - FmaPagExp
+13-08-2020 13:10:10 AddUserFieldValidValueWrn: Valor - 51 - Existente para Campo - FmaPagExp
+13-08-2020 13:10:10 AddUserFieldValidValueWrn: Valor - 52 - Existente para Campo - FmaPagExp
+13-08-2020 13:10:10 AddUserFieldValidValueWrn: Valor - 53 - Existente para Campo - FmaPagExp
+13-08-2020 13:10:10 AddUserFieldValidValueWrn: Valor - 54 - Existente para Campo - FmaPagExp
+13-08-2020 13:10:11 AddUserFieldValidValueWrn: Valor - 55 - Existente para Campo - FmaPagExp
+13-08-2020 13:10:11 AddUserFieldValidValueWrn: Valor - 56 - Existente para Campo - FmaPagExp
+13-08-2020 13:10:11 AddUserFieldValidValueWrn: Valor - 57 - Existente para Campo - FmaPagExp
+13-08-2020 13:10:11 AddUserFieldValidValueWrn: Valor - 58 - Existente para Campo - FmaPagExp
+13-08-2020 13:10:12 AddUserFieldValidValueWrn: Valor - 59 - Existente para Campo - FmaPagExp
+13-08-2020 13:10:12 AddUserFieldValidValueWrn: Valor - 60 - Existente para Campo - FmaPagExp
+13-08-2020 13:10:12 AddUserFieldValidValueWrn: Valor - 61 - Existente para Campo - FmaPagExp
+13-08-2020 13:10:13 AddUserFieldValidValueWrn: Valor - 62 - Existente para Campo - FmaPagExp
+13-08-2020 13:10:13 AddUserFieldValidValueWrn: Valor - 63 - Existente para Campo - FmaPagExp
+13-08-2020 13:10:13 AddUserFieldValidValueWrn: Valor - 64 - Existente para Campo - FmaPagExp
+13-08-2020 13:10:14 AddUserFieldValidValueWrn: Valor - 65 - Existente para Campo - FmaPagExp
+13-08-2020 13:10:14 AddUserFieldValidValueWrn: Valor - 66 - Existente para Campo - FmaPagExp
+13-08-2020 13:10:14 AddUserFieldValidValueWrn: Valor - 67 - Existente para Campo - FmaPagExp
+13-08-2020 13:10:14 AddUserFieldValidValueWrn: Valor - 68 - Existente para Campo - FmaPagExp
+13-08-2020 13:10:15 AddUserFieldValidValueWrn: Valor - 69 - Existente para Campo - FmaPagExp
+13-08-2020 13:10:15 AddUserFieldValidValueWrn: Valor - 70 - Existente para Campo - FmaPagExp
+13-08-2020 13:10:15 AddUserFieldValidValueWrn: Valor - 71 - Existente para Campo - FmaPagExp
+13-08-2020 13:10:15 AddUserFieldValidValueWrn: Valor - 72 - Existente para Campo - FmaPagExp
+13-08-2020 13:10:16 AddUserFieldValidValueWrn: Valor - 73 - Existente para Campo - FmaPagExp
+13-08-2020 13:10:16 AddUserFieldValidValueWrn: Valor - 74 - Existente para Campo - FmaPagExp
+13-08-2020 13:10:16 AddUserFieldValidValueWrn: Valor - 75 - Existente para Campo - FmaPagExp
+13-08-2020 13:10:17 AddUserFieldValidValueWrn: Valor - 80 - Existente para Campo - FmaPagExp
+13-08-2020 13:10:17 AddUserFieldValidValueWrn: Valor - 81 - Existente para Campo - FmaPagExp
+13-08-2020 13:10:18 AddUserFieldValidValueWrn: Valor - 82 - Existente para Campo - FmaPagExp
+13-08-2020 13:10:18 AddUserFieldValidValueWrn: Valor - 83 - Existente para Campo - FmaPagExp
+13-08-2020 13:10:18 AddUserFieldValidValueWrn: Valor - 84 - Existente para Campo - FmaPagExp
+13-08-2020 13:10:19 AddUserFieldValidValueWrn: Valor - 85 - Existente para Campo - FmaPagExp
+13-08-2020 13:10:19 AddUserFieldsWrn: Campo - TipoBultos Existente.
+13-08-2020 13:10:19 AddUserFieldValidValueWrn: Valor - 1 - Existente para Campo - TipoBultos
+13-08-2020 13:10:19 AddUserFieldValidValueWrn: Valor - 11 - Existente para Campo - TipoBultos
+13-08-2020 13:10:19 AddUserFieldValidValueWrn: Valor - 12 - Existente para Campo - TipoBultos
+13-08-2020 13:10:19 AddUserFieldValidValueWrn: Valor - 13 - Existente para Campo - TipoBultos
+13-08-2020 13:10:19 AddUserFieldValidValueWrn: Valor - 16 - Existente para Campo - TipoBultos
+13-08-2020 13:10:19 AddUserFieldValidValueWrn: Valor - 17 - Existente para Campo - TipoBultos
+13-08-2020 13:10:19 AddUserFieldValidValueWrn: Valor - 18 - Existente para Campo - TipoBultos
+13-08-2020 13:10:19 AddUserFieldValidValueWrn: Valor - 2 - Existente para Campo - TipoBultos
+13-08-2020 13:10:19 AddUserFieldValidValueWrn: Valor - 21 - Existente para Campo - TipoBultos
+13-08-2020 13:10:20 AddUserFieldValidValueWrn: Valor - 22 - Existente para Campo - TipoBultos
+13-08-2020 13:10:20 AddUserFieldValidValueWrn: Valor - 23 - Existente para Campo - TipoBultos
+13-08-2020 13:10:20 AddUserFieldValidValueWrn: Valor - 24 - Existente para Campo - TipoBultos
+13-08-2020 13:10:20 AddUserFieldValidValueWrn: Valor - 26 - Existente para Campo - TipoBultos
+13-08-2020 13:10:20 AddUserFieldValidValueWrn: Valor - 27 - Existente para Campo - TipoBultos
+13-08-2020 13:10:20 AddUserFieldValidValueWrn: Valor - 28 - Existente para Campo - TipoBultos
+13-08-2020 13:10:20 AddUserFieldValidValueWrn: Valor - 29 - Existente para Campo - TipoBultos
+13-08-2020 13:10:21 AddUserFieldValidValueWrn: Valor - 3 - Existente para Campo - TipoBultos
+13-08-2020 13:10:21 AddUserFieldValidValueWrn: Valor - 30 - Existente para Campo - TipoBultos
+13-08-2020 13:10:21 AddUserFieldValidValueWrn: Valor - 31 - Existente para Campo - TipoBultos
+13-08-2020 13:10:21 AddUserFieldValidValueWrn: Valor - 32 - Existente para Campo - TipoBultos
+13-08-2020 13:10:21 AddUserFieldValidValueWrn: Valor - 33 - Existente para Campo - TipoBultos
+13-08-2020 13:10:22 AddUserFieldValidValueWrn: Valor - 34 - Existente para Campo - TipoBultos
+13-08-2020 13:10:22 AddUserFieldValidValueWrn: Valor - 35 - Existente para Campo - TipoBultos
+13-08-2020 13:10:22 AddUserFieldValidValueWrn: Valor - 36 - Existente para Campo - TipoBultos
+13-08-2020 13:10:22 AddUserFieldValidValueWrn: Valor - 37 - Existente para Campo - TipoBultos
+13-08-2020 13:10:23 AddUserFieldValidValueWrn: Valor - 38 - Existente para Campo - TipoBultos
+13-08-2020 13:10:23 AddUserFieldValidValueWrn: Valor - 39 - Existente para Campo - TipoBultos
+13-08-2020 13:10:23 AddUserFieldValidValueWrn: Valor - 4 - Existente para Campo - TipoBultos
+13-08-2020 13:10:23 AddUserFieldValidValueWrn: Valor - 41 - Existente para Campo - TipoBultos
+13-08-2020 13:10:24 AddUserFieldValidValueWrn: Valor - 42 - Existente para Campo - TipoBultos
+13-08-2020 13:10:24 AddUserFieldValidValueWrn: Valor - 43 - Existente para Campo - TipoBultos
+13-08-2020 13:10:24 AddUserFieldValidValueWrn: Valor - 44 - Existente para Campo - TipoBultos
+13-08-2020 13:10:25 AddUserFieldValidValueWrn: Valor - 45 - Existente para Campo - TipoBultos
+13-08-2020 13:10:25 AddUserFieldValidValueWrn: Valor - 46 - Existente para Campo - TipoBultos
+13-08-2020 13:10:25 AddUserFieldValidValueWrn: Valor - 47 - Existente para Campo - TipoBultos
+13-08-2020 13:10:26 AddUserFieldValidValueWrn: Valor - 5 - Existente para Campo - TipoBultos
+13-08-2020 13:10:26 AddUserFieldValidValueWrn: Valor - 51 - Existente para Campo - TipoBultos
+13-08-2020 13:10:27 AddUserFieldValidValueWrn: Valor - 61 - Existente para Campo - TipoBultos
+13-08-2020 13:10:27 AddUserFieldValidValueWrn: Valor - 62 - Existente para Campo - TipoBultos
+13-08-2020 13:10:28 AddUserFieldValidValueWrn: Valor - 63 - Existente para Campo - TipoBultos
+13-08-2020 13:10:28 AddUserFieldValidValueWrn: Valor - 64 - Existente para Campo - TipoBultos
+13-08-2020 13:10:28 AddUserFieldValidValueWrn: Valor - 65 - Existente para Campo - TipoBultos
+13-08-2020 13:10:29 AddUserFieldValidValueWrn: Valor - 66 - Existente para Campo - TipoBultos
+13-08-2020 13:10:29 AddUserFieldValidValueWrn: Valor - 75 - Existente para Campo - TipoBultos
+13-08-2020 13:10:30 AddUserFieldValidValueWrn: Valor - 77 - Existente para Campo - TipoBultos
+13-08-2020 13:10:30 AddUserFieldValidValueWrn: Valor - 78 - Existente para Campo - TipoBultos
+13-08-2020 13:10:32 AddUserFieldValidValueWrn: Valor - 80 - Existente para Campo - TipoBultos
+13-08-2020 13:10:33 AddUserFieldValidValueWrn: Valor - 81 - Existente para Campo - TipoBultos
+13-08-2020 13:10:33 AddUserFieldValidValueWrn: Valor - 82 - Existente para Campo - TipoBultos
+13-08-2020 13:10:34 AddUserFieldValidValueWrn: Valor - 83 - Existente para Campo - TipoBultos
+13-08-2020 13:10:34 AddUserFieldValidValueWrn: Valor - 85 - Existente para Campo - TipoBultos
+13-08-2020 13:10:34 AddUserFieldValidValueWrn: Valor - 88 - Existente para Campo - TipoBultos
+13-08-2020 13:10:35 AddUserFieldValidValueWrn: Valor - 89 - Existente para Campo - TipoBultos
+13-08-2020 13:10:35 AddUserFieldValidValueWrn: Valor - 90 - Existente para Campo - TipoBultos
+13-08-2020 13:10:36 AddUserFieldValidValueWrn: Valor - 91 - Existente para Campo - TipoBultos
+13-08-2020 13:10:36 AddUserFieldValidValueWrn: Valor - 92 - Existente para Campo - TipoBultos
+13-08-2020 13:10:37 AddUserFieldValidValueWrn: Valor - 99 - Existente para Campo - TipoBultos
+13-08-2020 13:10:37 AddUserFieldsWrn: Campo - CantBultos Existente.
+13-08-2020 13:10:37 AddUserFieldsWrn: Campo - FmaPagExp Existente.
+13-08-2020 13:10:37 AddUserFieldValidValueWrn: Valor - 0 - Existente para Campo - FmaPagExp
+13-08-2020 13:10:38 AddUserFieldValidValueWrn: Valor - 1 - Existente para Campo - FmaPagExp
+13-08-2020 13:10:38 AddUserFieldValidValueWrn: Valor - 2 - Existente para Campo - FmaPagExp
+13-08-2020 13:10:38 AddUserFieldValidValueWrn: Valor - 11 - Existente para Campo - FmaPagExp
+13-08-2020 13:10:38 AddUserFieldValidValueWrn: Valor - 12 - Existente para Campo - FmaPagExp
+13-08-2020 13:10:38 AddUserFieldValidValueWrn: Valor - 21 - Existente para Campo - FmaPagExp
+13-08-2020 13:10:38 AddUserFieldValidValueWrn: Valor - 32 - Existente para Campo - FmaPagExp
+13-08-2020 13:10:38 AddUserFieldsWrn: Campo - EstadoSII Existente.
+13-08-2020 13:10:38 AddUserFieldValidValueWrn: Valor - P - Existente para Campo - EstadoSII
+13-08-2020 13:10:38 AddUserFieldValidValueWrn: Valor - ACD - Existente para Campo - EstadoSII
+13-08-2020 13:10:38 AddUserFieldValidValueWrn: Valor - RCD - Existente para Campo - EstadoSII
+13-08-2020 13:10:38 AddUserFieldValidValueWrn: Valor - ERM - Existente para Campo - EstadoSII
+13-08-2020 13:10:39 AddUserFieldValidValueWrn: Valor - RFP - Existente para Campo - EstadoSII
+13-08-2020 13:10:39 AddUserFieldValidValueWrn: Valor - RFT - Existente para Campo - EstadoSII
+13-08-2020 13:10:39 AddUserFieldValidValueWrn: Valor - ACO - Existente para Campo - EstadoSII
+13-08-2020 13:10:39 AddUserFieldsWrn: Campo - VID_FEDocB Existente.
+13-08-2020 13:10:39 AddUserFieldsWrn: Campo - TpoTranCpra Existente.
+13-08-2020 13:10:39 AddUserFieldValidValueWrn: Valor - 1 - Existente para Campo - TpoTranCpra
+13-08-2020 13:10:39 AddUserFieldValidValueWrn: Valor - 2 - Existente para Campo - TpoTranCpra
+13-08-2020 13:10:39 AddUserFieldValidValueWrn: Valor - 3 - Existente para Campo - TpoTranCpra
+13-08-2020 13:10:39 AddUserFieldValidValueWrn: Valor - 4 - Existente para Campo - TpoTranCpra
+13-08-2020 13:10:39 AddUserFieldValidValueWrn: Valor - 5 - Existente para Campo - TpoTranCpra
+13-08-2020 13:10:40 AddUserFieldValidValueWrn: Valor - 6 - Existente para Campo - TpoTranCpra
+13-08-2020 13:10:40 AddUserFieldsWrn: Campo - TpoTranVta Existente.
+13-08-2020 13:10:40 AddUserFieldValidValueWrn: Valor - 1 - Existente para Campo - TpoTranVta
+13-08-2020 13:10:40 AddUserFieldValidValueWrn: Valor - 2 - Existente para Campo - TpoTranVta
+13-08-2020 13:10:40 AddUserFieldValidValueWrn: Valor - 3 - Existente para Campo - TpoTranVta
+13-08-2020 13:10:40 AddUserFieldsWrn: Campo - CdgSiiSuc Existente.
+13-08-2020 13:10:40 AddUserFieldsWrn: Campo - Foliofe Existente.
+13-08-2020 13:10:40 AddUserFieldValidValueWrn: Valor - 1 - Existente para Campo - Foliofe
+13-08-2020 13:10:40 AddUserFieldValidValueWrn: Valor - 2 - Existente para Campo - Foliofe
+13-08-2020 13:10:40 AddUserFieldValidValueWrn: Valor - 3 - Existente para Campo - Foliofe
+13-08-2020 13:10:41 AddUserFieldsWrn: Campo - FESucursal Existente.
+13-08-2020 13:10:41 Tabla SBO: OCRD
+13-08-2020 13:10:41 AddUserFieldsWrn: Campo - FE_Export Existente.
+13-08-2020 13:10:41 AddUserFieldValidValueWrn: Valor - Y - Existente para Campo - FE_Export
+13-08-2020 13:10:41 AddUserFieldValidValueWrn: Valor - N - Existente para Campo - FE_Export
+13-08-2020 13:10:41 Tabla SBO: RIN1
+13-08-2020 13:10:41 AddUserFieldsWrn: Campo - TipoDTELF Existente.
+13-08-2020 13:10:41 AddUserFieldValidValueWrn: Valor - 00 - Existente para Campo - TipoDTELF
+13-08-2020 13:10:41 AddUserFieldValidValueWrn: Valor - 99 - Existente para Campo - TipoDTELF
+13-08-2020 13:10:41 AddUserFieldValidValueWrn: Valor - 33 - Existente para Campo - TipoDTELF
+13-08-2020 13:10:41 AddUserFieldValidValueWrn: Valor - 34 - Existente para Campo - TipoDTELF
+13-08-2020 13:10:41 AddUserFieldValidValueWrn: Valor - 39 - Existente para Campo - TipoDTELF
+13-08-2020 13:10:42 AddUserFieldValidValueWrn: Valor - 41 - Existente para Campo - TipoDTELF
+13-08-2020 13:10:42 AddUserFieldValidValueWrn: Valor - 43 - Existente para Campo - TipoDTELF
+13-08-2020 13:10:42 AddUserFieldValidValueWrn: Valor - 46 - Existente para Campo - TipoDTELF
+13-08-2020 13:10:42 AddUserFieldValidValueWrn: Valor - 56 - Existente para Campo - TipoDTELF
+13-08-2020 13:10:42 AddUserFieldValidValueWrn: Valor - 61 - Existente para Campo - TipoDTELF
+13-08-2020 13:10:42 AddUserFieldValidValueWrn: Valor - 110 - Existente para Campo - TipoDTELF
+13-08-2020 13:10:43 AddUserFieldValidValueWrn: Valor - 111 - Existente para Campo - TipoDTELF
+13-08-2020 13:10:43 AddUserFieldValidValueWrn: Valor - 112 - Existente para Campo - TipoDTELF
+13-08-2020 13:10:43 AddUserFieldValidValueWrn: Valor - 30 - Existente para Campo - TipoDTELF
+13-08-2020 13:10:43 AddUserFieldValidValueWrn: Valor - 32 - Existente para Campo - TipoDTELF
+13-08-2020 13:10:44 AddUserFieldValidValueWrn: Valor - 35 - Existente para Campo - TipoDTELF
+13-08-2020 13:10:44 AddUserFieldValidValueWrn: Valor - 38 - Existente para Campo - TipoDTELF
+13-08-2020 13:10:44 AddUserFieldValidValueWrn: Valor - 40 - Existente para Campo - TipoDTELF
+13-08-2020 13:10:44 AddUserFieldValidValueWrn: Valor - 45 - Existente para Campo - TipoDTELF
+13-08-2020 13:10:45 AddUserFieldValidValueWrn: Valor - 55 - Existente para Campo - TipoDTELF
+13-08-2020 13:10:45 AddUserFieldValidValueWrn: Valor - 60 - Existente para Campo - TipoDTELF
+13-08-2020 13:10:45 AddUserFieldValidValueWrn: Valor - 101 - Existente para Campo - TipoDTELF
+13-08-2020 13:10:45 AddUserFieldValidValueWrn: Valor - 104 - Existente para Campo - TipoDTELF
+13-08-2020 13:10:46 AddUserFieldValidValueWrn: Valor - 106 - Existente para Campo - TipoDTELF
+13-08-2020 13:10:46 AddUserFieldsWrn: Campo - FolioLiqF Existente.
+13-08-2020 13:10:46 Tabla SBO: OCTG
+13-08-2020 13:10:46 AddUserFieldsWrn: Campo - FmaPago Existente.
+13-08-2020 13:10:46 AddUserFieldValidValueWrn: Valor - 1 - Existente para Campo - FmaPago
+13-08-2020 13:10:46 AddUserFieldValidValueWrn: Valor - 2 - Existente para Campo - FmaPago
+13-08-2020 13:10:46 AddUserFieldValidValueWrn: Valor - 3 - Existente para Campo - FmaPago

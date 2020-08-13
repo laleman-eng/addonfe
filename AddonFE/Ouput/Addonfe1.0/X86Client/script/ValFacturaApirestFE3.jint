@@ -1,0 +1,11 @@
+function execute()
+{
+	if (jsonString === "")
+	{
+		jsonString = "{}";
+	}
+
+	var url = 'http://localhost:2396/api/Factura/validarDocumento';
+	var result = sbo.SendJson(url,jsonString);
+	return result;
+}

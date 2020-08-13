@@ -1,0 +1,31 @@
+{ 
+	"Modulo":[
+	{
+		type: "string",
+		UniqueID : "AddonFE.PortalEasyDoc",
+		String : "Portal Easydoc",
+		Title: "Portal Easydoc",
+		Width: 1300,
+		Height: 790,
+		url: "http://portal.easydoc.cl/index.aspx"
+	},
+	{
+		type: "string",
+		UniqueID : "AddonFE.EstadoDocumentoEnviado",
+		String : "Estado documentos enviado",
+		Title: "Estado documentos enviado",
+		Width: 1300,
+		Height: 790,
+		url: "http://localhost:54942/WebForm1.aspx"
+	},
+	{
+		type: "string",
+		UniqueID : "AddonFE.Google",
+		String : "Google",
+		Title: "Google",
+		Width: 1200,
+		Height: 790,
+		url: "http://google.cl"
+	}
+	]
+}

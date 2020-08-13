@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AddOnRegData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" SlientInstallation="No" SlientUpgrade="No" Partnernmsp="VID" SchemaVersion="3.0" Type="" MultipleVersion="false" OnDemand="" OnPremise="" ExtName="AddonFE" ExtVersion="1.0" Contdata="soportesbo@visualkgroup.com" Partner="Visual Developer" DBType="MSSQL" ClientType="W">
+  <Validity>
+    <SBOCompatibility>
+      <Version From="" To="" />
+    </SBOCompatibility>
+  </Validity>
+  <Configuration>
+    <Repository>
+      <Properties />
+    </Repository>
+    <Deployment>
+      <Properties />
+    </Deployment>
+    <Assignment>
+      <Properties />
+    </Assignment>
+  </Configuration>
+  <Addons>
+    <Addon Name="" Group="" ForceFlag="" Visible="" AutoAssign="" SelfUpgrd="">
+      <x86 AddonExe="C:\VisualK\addonfe\AddonFE\bin\x86\Debug\AddonFE.exe" AddonSig="">
+        <Installation>
+          <Files>
+            <File FileName="AddonFE.b1s">
+              <Actions />
+            </File>
+            <File FileName="AddonFE.exe">
+              <Actions />
+            </File>
+            <File FileName="AddonFE.exe.config">
+              <Actions />
+            </File>
+            <File FileName="AddonFE.pdb">
+              <Actions />
+            </File>
+            <File FileName="AddonFE.vshost.exe">
+              <Actions />
+            </File>
+            <File FileName="AddonFE.vshost.exe.config">
+              <Actions />
+            </File>
+            <File FileName="AddonFE.vshost.exe.manifest">
+              <Actions />
+            </File>
+            <File FileName="Jint.dll">
+              <Actions />
+            </File>
+            <File FileName="log.txt">
+              <Actions />
+            </File>
+            <File FileName="Newtonsoft.Json.dll">
+              <Actions />
+            </File>
+            <File FileName="Newtonsoft.Json.xml">
+              <Actions />
+            </File>
+            <File FileName="SBOFunctions.dll">
+              <Actions />
+            </File>
+            <File FileName="VDLog_2020-08-13.log">
+              <Actions />
+            </File>
+            <File FileName="Docs\EDRP.xls">
+              <Actions />
+            </File>
+            <File FileName="Docs\UDFFELEC.xls">
+              <Actions />
+            </File>
+            <File FileName="Docs\UDFFELECCL.xls">
+              <Actions />
+            </File>
+            <File FileName="Docs\UDFSAP.xls">
+              <Actions />
+            </File>
+            <File FileName="Docs\VID_FECODPAIS.csv">
+              <Actions />
+            </File>
+            <File FileName="Docs\VID_FEPTOEMB.csv">
+              <Actions />
+            </File>
+            <File FileName="params\menu.json">
+              <Actions />
+            </File>
+            <File FileName="script\ValFacturaApirestFE.jint">
+              <Actions />
+            </File>
+            <File FileName="script\ValFacturaApirestFE1.jint">
+              <Actions />
+            </File>
+            <File FileName="script\ValFacturaApirestFE3.jint">
+              <Actions />
+            </File>
+          </Files>
+        </Installation>
+        <Uninstallation>
+          <Files>
+            <File FileName="AddonFE.b1s">
+              <Actions />
+            </File>
+            <File FileName="AddonFE.exe">
+              <Actions />
+            </File>
+            <File FileName="AddonFE.exe.config">
+              <Actions />
+            </File>
+            <File FileName="AddonFE.pdb">
+              <Actions />
+            </File>
+            <File FileName="AddonFE.vshost.exe">
+              <Actions />
+            </File>
+            <File FileName="AddonFE.vshost.exe.config">
+              <Actions />
+            </File>
+            <File FileName="AddonFE.vshost.exe.manifest">
+              <Actions />
+            </File>
+            <File FileName="Jint.dll">
+              <Actions />
+            </File>
+            <File FileName="log.txt">
+              <Actions />
+            </File>
+            <File FileName="Newtonsoft.Json.dll">
+              <Actions />
+            </File>
+            <File FileName="Newtonsoft.Json.xml">
+              <Actions />
+            </File>
+            <File FileName="SBOFunctions.dll">
+              <Actions />
+            </File>
+            <File FileName="VDLog_2020-08-13.log">
+              <Actions />
+            </File>
+            <File FileName="Docs\EDRP.xls">
+              <Actions />
+            </File>
+            <File FileName="Docs\UDFFELEC.xls">
+              <Actions />
+            </File>
+            <File FileName="Docs\UDFFELECCL.xls">
+              <Actions />
+            </File>
+            <File FileName="Docs\UDFSAP.xls">
+              <Actions />
+            </File>
+            <File FileName="Docs\VID_FECODPAIS.csv">
+              <Actions />
+            </File>
+            <File FileName="Docs\VID_FEPTOEMB.csv">
+              <Actions />
+            </File>
+            <File FileName="params\menu.json">
+              <Actions />
+            </File>
+            <File FileName="script\ValFacturaApirestFE.jint">
+              <Actions />
+            </File>
+            <File FileName="script\ValFacturaApirestFE1.jint">
+              <Actions />
+            </File>
+            <File FileName="script\ValFacturaApirestFE3.jint">
+              <Actions />
+            </File>
+          </Files>
+        </Uninstallation>
+      </x86>
+      <x64 AddonExe="" AddonSig="">
+        <Installation>
+          <Files />
+        </Installation>
+        <Uninstallation>
+          <Files />
+        </Uninstallation>
+      </x64>
+    </Addon>
+  </Addons>
+  <XApps>
+    <XApp Name="" Path="" FileName="" />
+  </XApps>
+  <UDQs>
+    <UDQ udqname="">
+      <Hana FileName="" />
+    </UDQ>
+  </UDQs>
+</AddOnRegData>
