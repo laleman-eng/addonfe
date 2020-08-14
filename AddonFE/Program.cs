@@ -143,11 +143,11 @@ namespace AddonFE
                 // Console.WriteLine(engine.Execute("2+2").GetCompletionValue());
 
 
-
-                //habilitacion del Webserver
+          
                 string prefix = "http://+:50201/";
-                var ws = new Webserver(SendResponse, prefix);
+                ws = new Webserver(SendResponse, prefix);
                 ws.Run();
+                
 
 //                script = @"
 //                    var file = new System.IO.StreamWriter('log.txt');
@@ -225,9 +225,6 @@ namespace AddonFE
                 //**************************************************************************************
 
 
-
-
-
                 oApp.Run();
 
             }
@@ -239,28 +236,34 @@ namespace AddonFE
 
         static void SBO_Application_AppEvent(SAPbouiCOM.BoAppEventTypes EventType)
         {
-            switch (EventType)
+            try
             {
-                case SAPbouiCOM.BoAppEventTypes.aet_ShutDown:
-                    ws.Stop();
-                    System.Windows.Forms.Application.Exit();
-                    break;
-                case SAPbouiCOM.BoAppEventTypes.aet_CompanyChanged:
-                    ws.Stop();
-                    System.Windows.Forms.Application.Exit();
-                    break;
-                case SAPbouiCOM.BoAppEventTypes.aet_FontChanged:
-                    break;
-                case SAPbouiCOM.BoAppEventTypes.aet_LanguageChanged:
-                    break;
-                case SAPbouiCOM.BoAppEventTypes.aet_ServerTerminition:
-                    ws.Stop();
-                    System.Windows.Forms.Application.Exit();
-                    break;
-
-                default:
-                    break;
+                switch (EventType)
+                {
+                    case SAPbouiCOM.BoAppEventTypes.aet_ShutDown:
+                        ws.Stop();
+                        System.Windows.Forms.Application.Exit();
+                        break;
+                    case SAPbouiCOM.BoAppEventTypes.aet_CompanyChanged:
+                        ws.Stop();
+                        System.Windows.Forms.Application.Exit();
+                        break;
+                    case SAPbouiCOM.BoAppEventTypes.aet_FontChanged:
+                        break;
+                    case SAPbouiCOM.BoAppEventTypes.aet_LanguageChanged:
+                        break;
+                    case SAPbouiCOM.BoAppEventTypes.aet_ServerTerminition:
+                        ws.Stop();
+                        System.Windows.Forms.Application.Exit();
+                        break;
+                    default:
+                        break;
+                }
+            } catch (Exception e)
+            {
+                System.Windows.Forms.MessageBox.Show(" App Event Exception: "+ e.Message);
             }
+     
         }
 
         static void SBO_Application_ItemEvent(string FormUID, ref SAPbouiCOM.ItemEvent pVal, out bool BubbleEvent)

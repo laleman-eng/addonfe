@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<AddOnRegData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" SlientInstallation="No" SlientUpgrade="No" Partnernmsp="VID" SchemaVersion="3.0" Type="" MultipleVersion="false" OnDemand="" OnPremise="" ExtName="AddonFE" ExtVersion="1.0" Contdata="soportesbo@visualkgroup.com" Partner="Visual Developer" DBType="MSSQL" ClientType="W">
+<AddOnRegData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" SlientInstallation="No" SlientUpgrade="No" Partnernmsp="VID" SchemaVersion="3.0" Type="" MultipleVersion="false" OnDemand="" OnPremise="" ExtName="AddonFE" ExtVersion="1.0" Contdata="soportesbo@visualkgroup.com" Partner="Visual Developer" DBType="Both" ClientType="A">
   <Validity>
     <SBOCompatibility>
       <Version From="" To="" />
@@ -33,19 +33,7 @@
             <File FileName="AddonFE.pdb">
               <Actions />
             </File>
-            <File FileName="AddonFE.vshost.exe">
-              <Actions />
-            </File>
-            <File FileName="AddonFE.vshost.exe.config">
-              <Actions />
-            </File>
-            <File FileName="AddonFE.vshost.exe.manifest">
-              <Actions />
-            </File>
             <File FileName="Jint.dll">
-              <Actions />
-            </File>
-            <File FileName="log.txt">
               <Actions />
             </File>
             <File FileName="Newtonsoft.Json.dll">
@@ -54,10 +42,10 @@
             <File FileName="Newtonsoft.Json.xml">
               <Actions />
             </File>
-            <File FileName="SBOFunctions.dll">
+            <File FileName="SAPBusinessOneSDK.dll">
               <Actions />
             </File>
-            <File FileName="VDLog_2020-08-13.log">
+            <File FileName="SBOFunctions.dll">
               <Actions />
             </File>
             <File FileName="Docs\EDRP.xls">
@@ -106,19 +94,7 @@
             <File FileName="AddonFE.pdb">
               <Actions />
             </File>
-            <File FileName="AddonFE.vshost.exe">
-              <Actions />
-            </File>
-            <File FileName="AddonFE.vshost.exe.config">
-              <Actions />
-            </File>
-            <File FileName="AddonFE.vshost.exe.manifest">
-              <Actions />
-            </File>
             <File FileName="Jint.dll">
-              <Actions />
-            </File>
-            <File FileName="log.txt">
               <Actions />
             </File>
             <File FileName="Newtonsoft.Json.dll">
@@ -127,10 +103,10 @@
             <File FileName="Newtonsoft.Json.xml">
               <Actions />
             </File>
-            <File FileName="SBOFunctions.dll">
+            <File FileName="SAPBusinessOneSDK.dll">
               <Actions />
             </File>
-            <File FileName="VDLog_2020-08-13.log">
+            <File FileName="SBOFunctions.dll">
               <Actions />
             </File>
             <File FileName="Docs\EDRP.xls">
