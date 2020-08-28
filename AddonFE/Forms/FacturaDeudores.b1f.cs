@@ -15,7 +15,7 @@ namespace AddonFE.Forms
     {
         private static SAPbouiCOM.Form oForm = null;
         private static SAPbobsCOM.Company oCompany = Conexion.oCompany;
-        private SAPbobsCOM.Documents oDocument;
+        //private SAPbobsCOM.Documents oDocument;
         private static string classid = "Factura Deudores";
         public Jint.Engine engine;
         SboJint p;
@@ -110,6 +110,7 @@ namespace AddonFE.Forms
             }
             catch (Exception ex)
             {
+                Console.Write(ex.Message);
                 return "";
             }
            

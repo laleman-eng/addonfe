@@ -42,7 +42,7 @@ namespace AddonFE
             }
             catch (Exception e)
             {
-
+                Console.Write("exception e: " + e.Message);
             }
 
             try
@@ -80,8 +80,9 @@ namespace AddonFE
                     }
                 }
             }
-            catch (Exception er)
+            catch (Exception ex)
             { //  Menu already exists
+                Console.Write(ex.Message);
                 Application.SBO_Application.SetStatusBarMessage("Menu Already Exists", SAPbouiCOM.BoMessageTime.bmt_Short, true);
             }
         }

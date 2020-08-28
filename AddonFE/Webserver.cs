@@ -90,7 +90,7 @@ namespace AddonFE
                 }
                 catch (Exception ex)
                 {
-                    // ignorada
+                    Console.Write(ex.Message);
                 }
             });
         }

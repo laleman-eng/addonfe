@@ -109,6 +109,7 @@
       <DependentUpon>WebAppForm.b1f</DependentUpon>
     </Compile>
     <Compile Include="Models\Modulo.cs" />
+    <Compile Include="Models\Params.cs" />
     <Compile Include="SboJint.cs" />
     <Compile Include="Webserver.cs" />
     <None Include="app.config" />

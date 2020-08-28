@@ -7,6 +7,8 @@ using System.Xml;
 using System.Net;
 using System.IO;
 using SBOFunctions;
+using Newtonsoft.Json;
+using AddonFE.Models;
 
 namespace AddonFE
 {
@@ -142,9 +144,15 @@ namespace AddonFE
 
                 // Console.WriteLine(engine.Execute("2+2").GetCompletionValue());
 
+                Params list;
+                string jsonMenuPath = @"params/params.json";
+                using (StreamReader jsonStram = File.OpenText(jsonMenuPath))
+                {
+                    var json = jsonStram.ReadToEnd();
+                    list = JsonConvert.DeserializeObject<Params>(json);
+                }
 
-          
-                string prefix = "http://+:50201/";
+                string prefix = list.urlws;
                 ws = new Webserver(SendResponse, prefix);
                 ws.Run();
                 
@@ -270,9 +278,9 @@ namespace AddonFE
         {
             BubbleEvent = true;
 
-            SAPbouiCOM.Form oForm = null;
-            SAPbouiCOM.EditText oEdit = null;
-            SAPbouiCOM.DataTable oDataTable = null;
+            //SAPbouiCOM.Form oForm = null;
+            //SAPbouiCOM.EditText oEdit = null;
+            //SAPbouiCOM.DataTable oDataTable = null;
 
             try
             {

@@ -77,6 +77,7 @@ namespace AddonFE
             }
             catch (Exception ex)
             {
+                Console.Write(ex.Message);
 
             }
 
