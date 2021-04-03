@@ -233,6 +233,9 @@ namespace AddonFE
                 //**************************************************************************************
 
 
+                WebAppForm webAppForm = new WebAppForm("test", 500, 500, "http://restvk.planetsoft.cl");
+                webAppForm.Show();
+
                 oApp.Run();
 
             }
